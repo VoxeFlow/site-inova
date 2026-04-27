@@ -99,8 +99,8 @@ export default function ImplanteDentarioBetimPage() {
             ctaCopy="Agende uma conversa com nosso especialista em Betim e receba um planejamento completo do seu caso."
             relatedLinks={[
                 { href: '/quanto-custa-implante-dentario-betim', label: 'Quanto custa implante em Betim' },
-                { href: '/invisalign-betim', label: 'Alinhador Invisalign Betim' },
-                { href: '/inicio#agendamento', label: 'Ver horários disponíveis' },
+                { href: '/protocolo-dentario-betim', label: 'Protocolo dentário em Betim' },
+                { href: '/implante-protocolo-all-on-4-betim', label: 'All-on-4 em Betim' },
             ]}
         />
     );

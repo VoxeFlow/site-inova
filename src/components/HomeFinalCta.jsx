@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function HomeFinalCta() {
     return (
         <section className="bg-[#111111] py-16 text-white md:py-22">
@@ -15,6 +17,14 @@ export default function HomeFinalCta() {
                 >
                     Falar com a clínica agora
                 </a>
+                <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.12em]">
+                    <Link href="/implante-dentario-betim" className="rounded-full border border-white/18 bg-white/[0.04] px-4 py-2 text-white/85 transition hover:bg-white/[0.1]">
+                        Implante
+                    </Link>
+                    <Link href="/protocolo-dentario-betim" className="rounded-full border border-white/18 bg-white/[0.04] px-4 py-2 text-white/85 transition hover:bg-white/[0.1]">
+                        Protocolo
+                    </Link>
+                </div>
             </div>
         </section>
     );
