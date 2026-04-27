@@ -10,6 +10,11 @@ const faqs = [
             'Com anestesia local e planejamento, o procedimento costuma ser mais tranquilo do que muitos pacientes imaginam.',
     },
     {
+        question: 'Preciso fazer avaliação antes de saber o valor?',
+        answer:
+            'Sim. O preço do implante dentário depende da condição óssea, quantidade de dentes e tipo de planejamento. A avaliação evita promessas rasas e ajuda a orientar o melhor caminho.',
+    },
+    {
         question: 'Quanto tempo dura um implante?',
         answer:
             'Com manutenção adequada, o implante pode durar muitos anos. O acompanhamento clínico faz diferença nessa durabilidade.',
@@ -18,11 +23,6 @@ const faqs = [
         question: 'Posso fazer implante se perdi o dente há muito tempo?',
         answer:
             'Muitas vezes, sim. Em alguns casos, pode ser necessária uma etapa complementar para preparar a região antes do implante dentário.',
-    },
-    {
-        question: 'Preciso fazer avaliação antes de saber o valor?',
-        answer:
-            'Sim. O preço do implante dentário depende da condição óssea, quantidade de dentes e tipo de planejamento. A avaliação evita promessas rasas e ajuda a orientar o melhor caminho.',
     },
     {
         question: 'O implante melhora a mastigação?',

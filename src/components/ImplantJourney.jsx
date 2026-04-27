@@ -8,12 +8,8 @@ const steps = [
         copy: 'Os exames confirmam o melhor plano para você.',
     },
     {
-        title: '3. Implante',
-        copy: 'A instalação é feita com técnica e acompanhamento.',
-    },
-    {
-        title: '4. Finalização',
-        copy: 'Concluímos com ajuste funcional e estético.',
+        title: '3. Implante e finalização',
+        copy: 'Instalação e ajuste final com acompanhamento clínico.',
     },
 ];
 
@@ -31,7 +27,7 @@ export default function ImplantJourney() {
                     </p>
                 </div>
 
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                <div className="grid gap-4 md:grid-cols-3">
                     {steps.map((step) => (
                         <article
                             key={step.title}

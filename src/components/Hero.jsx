@@ -22,7 +22,7 @@ export default function Hero() {
     };
 
     return (
-        <section id="inicio" className="relative flex min-h-[auto] items-center overflow-hidden bg-white pb-16 pt-28 md:min-h-[90vh] md:pb-24 md:pt-40">
+        <section id="inicio" className="relative flex min-h-[auto] items-center overflow-hidden bg-white pb-12 pt-24 md:min-h-[90vh] md:pb-24 md:pt-40">
             <div className="max-w-7xl mx-auto w-full px-5 md:px-6">
                 <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
 
@@ -42,27 +42,28 @@ export default function Hero() {
                             </p>
                         ) : null}
 
-                        <h1 className="mb-5 max-w-2xl text-[1.85rem] font-black leading-[1.04] text-txt-primary sm:text-[2.25rem] md:mb-7 md:text-5xl lg:text-[3.1rem]">
+                        <h1 className="mb-4 max-w-2xl text-[1.9rem] font-black leading-[1.04] text-txt-primary sm:text-[2.25rem] md:mb-7 md:text-5xl lg:text-[3.1rem]">
                             <span className="hidden md:inline">
                                 Perdeu um ou mais dentes? O implante dentário pode devolver sua segurança ao sorrir e mastigar
                             </span>
                             <span className="md:hidden">
-                                Implante dentário em Betim para voltar a mastigar com segurança
+                                Implante dentário em Betim
                             </span>
                         </h1>
 
                         <p className="max-w-xl text-[15px] font-medium leading-7 text-gray-600 md:mb-9 md:text-lg md:leading-relaxed">
-                            Entenda seu caso com clareza antes de decidir.
+                            <span className="md:hidden">Volte a mastigar com segurança e entenda seu caso antes de decidir.</span>
+                            <span className="hidden md:inline">Entenda seu caso com clareza antes de decidir.</span>
                         </p>
 
-                        <div className="mb-6 mt-5 max-w-xl rounded-[22px] border border-brand-gold/25 bg-[#faf8f4] px-5 py-4 shadow-[0_14px_40px_rgba(0,0,0,0.04)] md:mb-8">
+                        <div className="mb-5 mt-4 max-w-xl rounded-[22px] border border-brand-gold/25 bg-[#faf8f4] px-5 py-4 shadow-[0_14px_40px_rgba(0,0,0,0.04)] md:mb-8">
                             <p className="text-[11px] font-black uppercase tracking-[0.24em] text-brand-gold">Investimento inicial</p>
                             <p className="mt-2 text-2xl font-black leading-none text-txt-primary md:text-3xl">
                                 Parcelas a partir de R$150/mês*
                             </p>
                         </div>
 
-                        <div className="mb-8 mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4 md:mb-10">
+                        <div className="mb-6 mt-6 flex flex-col gap-3 sm:flex-row sm:gap-4 md:mb-10">
                             <motion.a
                                 whileHover={{ scale: 1.03 }}
                                 whileTap={{ scale: 0.98 }}
@@ -89,7 +90,7 @@ export default function Hero() {
                             *Valor inicial estimado e sujeito à avaliação clínica.
                         </p>
 
-                        <div className="grid grid-cols-2 gap-4 border-t border-gray-100 pt-6 sm:flex sm:items-center sm:gap-12 md:pt-8">
+                        <div className="hidden grid-cols-2 gap-4 border-t border-gray-100 pt-6 sm:items-center sm:gap-12 md:grid md:pt-8 lg:flex">
                             <div>
                                 <div className="text-3xl font-black text-txt-primary md:text-4xl">15+</div>
                                 <div className="text-xs text-gray-400 font-bold uppercase mt-2 tracking-wider">Anos de História</div>
@@ -138,10 +139,10 @@ export default function Hero() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="relative z-10 flex items-center lg:h-[700px]"
+                        className="relative z-10 mt-2 flex items-center md:mt-0 lg:h-[700px]"
                     >
                         <div className="absolute right-4 top-4 -z-10 h-full w-full rotate-3 rounded-[40px] border border-gray-100 bg-gray-50 md:right-10 md:top-10 md:rotate-6 md:rounded-[60px] dark:bg-zinc-800/50" />
-                        <div className="relative h-[22rem] w-full overflow-hidden rounded-[28px] shadow-2xl sm:h-[32rem] md:rounded-[40px] lg:h-[650px]">
+                        <div className="relative h-[11.5rem] w-full overflow-hidden rounded-[24px] shadow-2xl sm:h-[14rem] md:h-[32rem] md:rounded-[40px] lg:h-[650px]">
                             <Image
                                 src="/assets/Dr Jeff_edited.avif"
                                 alt="Dr. Jefferson Reis"

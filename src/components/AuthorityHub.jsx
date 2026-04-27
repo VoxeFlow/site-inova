@@ -23,7 +23,7 @@ const strategicPages = [
 
 export default function AuthorityHub() {
     return (
-        <section className="bg-[#f7f4ef] py-18 md:py-24">
+        <section className="hidden bg-[#f7f4ef] py-18 md:block md:py-24">
             <div className="max-w-7xl mx-auto px-5 md:px-6">
                 <div className="max-w-3xl mb-10 md:mb-14">
                     <p className="text-xs font-black uppercase tracking-[0.34em] text-brand-gold">Complementos</p>

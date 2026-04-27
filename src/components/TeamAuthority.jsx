@@ -1,6 +1,6 @@
 export default function TeamAuthority() {
     return (
-        <section className="bg-[#f7f4ef] py-16 md:py-22">
+        <section className="hidden bg-[#f7f4ef] py-16 md:block md:py-22">
             <div className="mx-auto max-w-5xl px-5 text-center md:px-6">
                 <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Equipe</p>
                 <h2 className="mt-5 text-3xl font-black leading-tight text-txt-primary md:text-4xl">

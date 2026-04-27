@@ -7,7 +7,7 @@ const items = [
 
 export default function ImplantTrustBlock() {
     return (
-        <section className="bg-[#f7f4ef] py-16 md:py-22">
+        <section className="hidden bg-[#f7f4ef] py-16 md:block md:py-22">
             <div className="mx-auto max-w-7xl px-5 md:px-6">
                 <div className="mx-auto max-w-4xl text-center">
                     <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Confiança clínica</p>
