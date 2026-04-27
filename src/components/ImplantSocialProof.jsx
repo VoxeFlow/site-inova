@@ -4,17 +4,17 @@ const testimonials = [
     {
         name: 'Paula Justus',
         photo: '/assets/pacientes/Paula Justus.jpeg',
-        quote: 'Cheguei insegura e hoje mastigo com confiança.',
+        quote: 'Eu evitava mastigar de um lado. Depois do implante, voltei ao normal.',
     },
     {
         name: 'Charles',
         photo: '/assets/pacientes/Charles.png',
-        quote: 'Entendi cada etapa antes de decidir e isso fez diferença.',
+        quote: 'Tinha vergonha de sorrir. Hoje sorrio com segurança.',
     },
     {
         name: 'Lara',
         photo: '/assets/pacientes/Lara.png',
-        quote: 'Atendimento humano e planejamento claro do início ao fim.',
+        quote: 'Achei que seria complicado, mas foi muito mais simples do que imaginei.',
     },
 ];
 
@@ -36,13 +36,13 @@ export default function ImplantSocialProof() {
                             className="rounded-[22px] border border-black/8 bg-[#faf8f4] p-5 shadow-[0_14px_40px_rgba(0,0,0,0.04)]"
                         >
                             <div className="flex items-center gap-3">
-                                <div className="relative h-12 w-12 overflow-hidden rounded-full border border-black/8 bg-white">
+                                <div className="relative h-16 w-16 overflow-hidden rounded-2xl border border-black/8 bg-white md:h-18 md:w-18">
                                     <Image
                                         src={item.photo}
                                         alt={`Paciente ${item.name}`}
                                         fill
-                                        sizes="48px"
-                                        className="object-cover"
+                                        sizes="72px"
+                                        className="object-cover object-top"
                                     />
                                 </div>
                                 <p className="text-sm font-black text-txt-primary">{item.name}</p>

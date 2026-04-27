@@ -11,7 +11,7 @@ export default function TeamAuthority() {
                             Você não precisa decidir sozinho
                         </h2>
                         <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base md:leading-8">
-                            Na Clínica Inova, dentista em Betim, o primeiro passo é entender seu caso e explicar possibilidades com clareza, sem pressão.
+                            Aqui, o primeiro passo não é falar de preço. É entender exatamente o seu caso e te mostrar o caminho com clareza.
                         </p>
                     </div>
                     <div className="relative h-56 overflow-hidden rounded-[20px] border border-black/6 md:h-72">

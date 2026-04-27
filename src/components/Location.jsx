@@ -4,6 +4,9 @@ import Link from 'next/link';
 import { CLINIC_INFO } from '@/lib/seo';
 
 export default function Location() {
+    const fullAddress = `${CLINIC_INFO.name}, ${CLINIC_INFO.address}, ${CLINIC_INFO.city} - ${CLINIC_INFO.state}, ${CLINIC_INFO.zip}`;
+    const embedQuery = encodeURIComponent(fullAddress);
+
     return (
         <section className="bg-white py-20 md:py-24">
             <div className="max-w-7xl mx-auto px-5 md:px-6">
@@ -35,13 +38,14 @@ export default function Location() {
                     </div>
                     <div className="relative h-[320px] overflow-hidden rounded-[24px] border border-gray-100 bg-gray-200 shadow-lg md:h-[400px] md:rounded-[32px]">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.999999999999!2d-44.198!3d-19.968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU4JzA0LjgiUyA0NMKwMTEnNTIuOCJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr"
+                            src={`https://www.google.com/maps?q=${embedQuery}&output=embed`}
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
                             allowFullScreen=""
                             loading="lazy"
                             title="Mapa da Clínica Inova em Betim"
+                            referrerPolicy="no-referrer-when-downgrade"
                             className="grayscale hover:grayscale-0 transition duration-700"
                         ></iframe>
                     </div>
