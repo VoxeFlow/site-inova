@@ -4,20 +4,20 @@ const strategicPages = [
     {
         href: '/alinhador-invisivel-betim',
         eyebrow: 'Ortodontia discreta',
-        title: 'Invisalign e alinhadores invisíveis',
-        copy: 'Para quem deseja corrigir o sorriso com previsibilidade, conforto e discrição.',
+        title: 'Invisalign',
+        copy: 'Alinhamento com discrição.',
     },
     {
         href: '/clareamento-dental-betim',
         eyebrow: 'Estética dental',
         title: 'Clareamento dental',
-        copy: 'Para quem busca melhorar a cor dos dentes com avaliação segura e orientação profissional.',
+        copy: 'Melhora de cor com segurança.',
     },
     {
         href: '/contato',
         eyebrow: 'Cuidado contínuo',
         title: 'Odontologia clínica',
-        copy: 'Prevenção, manutenção e acompanhamento para manter saúde bucal com constância.',
+        copy: 'Prevenção e manutenção contínua.',
     },
 ];
 
@@ -28,7 +28,7 @@ export default function AuthorityHub() {
                 <div className="max-w-3xl mb-10 md:mb-14">
                     <p className="text-xs font-black uppercase tracking-[0.34em] text-brand-gold">Complementos</p>
                     <h2 className="mt-5 text-3xl md:text-5xl font-black leading-tight text-txt-primary">
-                        Outras soluções que podem ser indicadas no seu caso
+                        Outros tratamentos
                     </h2>
                     <p className="mt-5 text-base leading-7 text-gray-600 md:text-lg md:leading-8">
                         Depois da avaliação, outros cuidados podem complementar seu planejamento, como alinhadores, clareamento ou odontologia clínica.

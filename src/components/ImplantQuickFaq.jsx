@@ -1,18 +1,18 @@
 const faqs = [
     {
-        question: 'Quanto custa um implante dentário em Betim?',
+        question: 'Quanto custa um implante em Betim?',
         answer:
-            'O valor depende do caso, mas alguns tratamentos podem começar com parcelas a partir de R$150/mês. A avaliação é necessária para definir exames, quantidade de dentes e planejamento.',
+            'O valor depende do caso, mas alguns tratamentos podem começar com parcelas a partir de R$150/mês. A avaliação define se o implante dentário parcelado faz sentido para seu planejamento.',
     },
     {
         question: 'Implante dentário dói?',
         answer:
-            'Na maioria dos casos, o procedimento é feito com anestesia local e controle adequado do pós-operatório. O desconforto costuma ser manejável com orientação correta.',
+            'Com anestesia local e planejamento, o procedimento costuma ser mais tranquilo do que muitos pacientes imaginam.',
     },
     {
         question: 'Quanto tempo dura um implante?',
         answer:
-            'Com planejamento e manutenção, o implante pode durar muitos anos. A durabilidade depende da saúde bucal, hábitos e acompanhamento clínico.',
+            'Com manutenção adequada, o implante pode durar muitos anos. O acompanhamento clínico faz diferença nessa durabilidade.',
     },
     {
         question: 'Posso fazer implante se perdi o dente há muito tempo?',
@@ -46,13 +46,15 @@ export default function ImplantQuickFaq() {
                 </div>
 
                 <div className="grid gap-4 md:grid-cols-2">
-                    {faqs.map((item) => (
+                    {faqs.map((item, index) => (
                         <article
                             key={item.question}
-                            className="rounded-[22px] border border-black/8 bg-[#faf8f4] px-5 py-5 shadow-[0_14px_40px_rgba(0,0,0,0.04)]"
+                            className={`rounded-[22px] border border-black/8 bg-[#faf8f4] px-5 py-5 shadow-[0_14px_40px_rgba(0,0,0,0.04)] ${
+                                index > 3 ? 'hidden md:block' : ''
+                            }`}
                         >
                             <h3 className="text-lg font-black leading-tight text-txt-primary">{item.question}</h3>
-                            <p className="mt-3 text-sm leading-7 text-gray-600">{item.answer}</p>
+                            <p className="mt-3 text-sm leading-6 text-gray-600">{item.answer}</p>
                         </article>
                     ))}
                 </div>

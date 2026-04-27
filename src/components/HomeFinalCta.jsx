@@ -7,7 +7,7 @@ export default function HomeFinalCta() {
                     Quer entender se o implante é indicado para você?
                 </h2>
                 <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-white/70 md:text-base md:leading-8">
-                    Fale com a Clínica Inova e receba uma orientação inicial clara sobre o melhor caminho para o seu caso.
+                    Fale com a Clínica Inova e receba orientação inicial.
                 </p>
                 <a
                     href="https://wa.me/553126260038"

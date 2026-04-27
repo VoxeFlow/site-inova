@@ -52,13 +52,13 @@ export default function Hero() {
                         </h1>
 
                         <p className="max-w-xl text-[15px] font-medium leading-7 text-gray-600 md:mb-9 md:text-lg md:leading-relaxed">
-                            Na Clínica Inova, você entende seu caso com clareza antes de decidir. Avaliação individualizada, planejamento seguro e orientação sobre valores.
+                            Entenda seu caso com clareza antes de decidir.
                         </p>
 
                         <div className="mb-6 mt-5 max-w-xl rounded-[22px] border border-brand-gold/25 bg-[#faf8f4] px-5 py-4 shadow-[0_14px_40px_rgba(0,0,0,0.04)] md:mb-8">
                             <p className="text-[11px] font-black uppercase tracking-[0.24em] text-brand-gold">Investimento inicial</p>
                             <p className="mt-2 text-2xl font-black leading-none text-txt-primary md:text-3xl">
-                                Em muitos casos, o tratamento pode começar com parcelas a partir de R$150/mês*
+                                Parcelas a partir de R$150/mês*
                             </p>
                         </div>
 
@@ -69,20 +69,20 @@ export default function Hero() {
                                 href="https://wa.me/553126260038"
                                 className="flex min-h-14 w-full items-center justify-center gap-3 rounded-full bg-txt-primary px-7 py-4 text-center text-xs font-black uppercase tracking-[0.18em] text-white shadow-xl transition-colors hover:bg-brand-gold sm:w-auto sm:px-8"
                             >
-                                Quero avaliar meu caso agora <ArrowRight className="h-4 w-4" />
+                                Quero avaliar meu caso <ArrowRight className="h-4 w-4" />
                             </motion.a>
                             <motion.a
                                 whileHover={{ scale: 1.03 }}
                                 whileTap={{ scale: 0.98 }}
-                                href="#como-funciona"
+                                href="#precos"
                                 className="flex min-h-14 w-full items-center justify-center rounded-full border-2 border-txt-primary px-7 py-4 text-center text-xs font-black uppercase tracking-[0.18em] text-txt-primary transition hover:bg-txt-primary hover:text-white sm:w-auto sm:px-8"
                             >
-                                Entender valores e etapas
+                                Ver valores
                             </motion.a>
                         </div>
 
                         <p className="mb-2 max-w-xl text-sm font-semibold leading-6 text-txt-primary/85">
-                            Quanto mais tempo você espera, mais o tratamento pode se tornar complexo.
+                            Esperar pode tornar o tratamento mais complexo.
                         </p>
 
                         <p className="max-w-xl text-xs leading-6 text-gray-500 md:text-sm">
@@ -100,7 +100,7 @@ export default function Hero() {
                             </div>
                         </div>
 
-                        <div className="mt-7 max-w-xl rounded-2xl border border-black/6 bg-white px-4 py-4 md:mt-9">
+                        <div className="mt-7 hidden max-w-xl rounded-2xl border border-black/6 bg-white px-4 py-4 md:mt-9 md:block">
                             <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500">
                                 Personalização opcional
                             </p>

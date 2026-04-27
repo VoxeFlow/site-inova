@@ -1,23 +1,19 @@
 const steps = [
     {
-        title: '1. Avaliação inicial',
-        copy: 'Você conversa com a equipe e recebe uma leitura inicial do seu caso com foco em segurança e previsibilidade.',
+        title: '1. Avaliação',
+        copy: 'Entendemos seu caso e seus objetivos.',
     },
     {
-        title: '2. Exames e planejamento',
-        copy: 'A clínica organiza os exames necessários para definir o plano ideal, sem promessas genéricas.',
+        title: '2. Exames',
+        copy: 'Os exames confirmam o melhor plano para você.',
     },
     {
-        title: '3. Instalação do implante',
-        copy: 'Com planejamento validado, a instalação do implante dentário é conduzida com técnica, critério e acompanhamento próximo.',
+        title: '3. Implante',
+        copy: 'A instalação é feita com técnica e acompanhamento.',
     },
     {
-        title: '4. Acompanhamento',
-        copy: 'Após a etapa cirúrgica, você recebe orientações claras para recuperação e controle da evolução do tratamento.',
-    },
-    {
-        title: '5. Finalização estética e funcional',
-        copy: 'A etapa final busca devolver mastigação, conforto e estética de forma estável, respeitando seu caso clínico.',
+        title: '4. Finalização',
+        copy: 'Concluímos com ajuste funcional e estético.',
     },
 ];
 
@@ -31,11 +27,11 @@ export default function ImplantJourney() {
                         Como funciona o tratamento com implante?
                     </h2>
                     <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base md:leading-8">
-                        Um caminho simples, humano e confiável para quem busca implante dentário em Betim com clareza desde a primeira consulta.
+                        Etapas simples para você entender o tratamento com clareza.
                     </p>
                 </div>
 
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                     {steps.map((step) => (
                         <article
                             key={step.title}

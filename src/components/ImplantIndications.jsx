@@ -1,5 +1,5 @@
 const items = [
-    'Perdi um ou mais dentes',
+    'Perdi um dente',
     'Uso prótese removível e quero mais segurança',
     'Tenho dificuldade para mastigar',
     'Evito sorrir por vergonha',
@@ -13,10 +13,10 @@ export default function ImplantIndications() {
                 <div className="mx-auto max-w-3xl text-center">
                     <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Indicação</p>
                     <h2 className="mt-5 text-3xl font-black leading-tight text-txt-primary md:text-5xl">
-                        Você se identifica com alguma dessas situações?
+                        Implante pode ser para você?
                     </h2>
                     <p className="mt-5 text-sm leading-7 text-gray-600 md:text-base md:leading-8">
-                        A indicação correta depende da avaliação clínica. Por isso, antes de falar em tratamento definitivo, é importante entender sua saúde bucal, exames e expectativas.
+                        Veja se você se identifica.
                     </p>
                 </div>
 
