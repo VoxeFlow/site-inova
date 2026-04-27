@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ImplantStoryBlock from '@/components/ImplantStoryBlock';
+import ImplantSocialProof from '@/components/ImplantSocialProof';
 import ImplantInvestmentSection from '@/components/ImplantInvestmentSection';
 import ImplantJourney from '@/components/ImplantJourney';
 import ImplantQuickFaq from '@/components/ImplantQuickFaq';
@@ -27,6 +28,7 @@ export default function HomePage() {
             <Navbar />
             <Hero />
             <ImplantStoryBlock />
+            <ImplantSocialProof />
             <ImplantInvestmentSection />
             <ImplantJourney />
             <ImplantQuickFaq />

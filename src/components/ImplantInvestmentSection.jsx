@@ -9,7 +9,7 @@ const factors = [
 
 export default function ImplantInvestmentSection() {
     return (
-        <section id="precos" className="bg-[#111111] py-14 text-white md:py-24">
+        <section id="precos" className="bg-[#111111] py-14 text-white md:py-22">
             <div className="mx-auto max-w-6xl px-5 md:px-6">
                 <div className="rounded-[24px] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-5 shadow-[0_24px_80px_rgba(0,0,0,0.2)] md:rounded-[34px] md:p-8">
                     <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Investimento</p>
@@ -17,13 +17,12 @@ export default function ImplantInvestmentSection() {
                         Quanto custa um implante dentário?
                     </h2>
                     <p className="mt-4 max-w-4xl text-sm leading-7 text-white/74 md:text-base md:leading-8">
-                        O valor depende da quantidade de dentes, condição óssea, exames e planejamento. Em muitos casos, o tratamento pode começar com parcelas a partir de R$150/mês*.
+                        Em muitos casos, o tratamento pode começar com parcelas a partir de R$150/mês*.
                     </p>
 
                     <div className="mt-5 rounded-[20px] border border-brand-gold/40 bg-white/[0.03] px-4 py-4 md:max-w-xl">
                         <p className="text-xs font-black uppercase tracking-[0.24em] text-brand-gold">Referência inicial</p>
                         <p className="mt-2 text-3xl font-black leading-none text-white">A partir de R$150/mês*</p>
-                        <p className="mt-2 text-xs leading-6 text-white/60">Avaliação necessária para definir o valor final.</p>
                     </div>
 
                     <ul className="mt-6 grid gap-2.5 md:grid-cols-2">
@@ -44,9 +43,6 @@ export default function ImplantInvestmentSection() {
 
                     <p className="mt-4 text-xs leading-6 text-white/48">
                         *Valor inicial estimado e sujeito à avaliação. Esta informação não substitui consulta profissional.
-                    </p>
-                    <p className="mt-2 text-xs leading-6 text-white/42">
-                        Para quem pesquisa quanto custa implante dentário, implante dentário preço e implante dentário parcelado, a avaliação clínica define o plano ideal.
                     </p>
                 </div>
             </div>

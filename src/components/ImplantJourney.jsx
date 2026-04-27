@@ -1,19 +1,15 @@
 const steps = [
     {
         title: '1. Avaliação',
-        copy: 'Entendemos sua necessidade e avaliamos sua saúde bucal.',
+        copy: 'Entendemos seu caso e suas prioridades.',
     },
     {
-        title: '2. Exames',
-        copy: 'Verificamos estrutura óssea e condições para o tratamento.',
+        title: '2. Exames e plano',
+        copy: 'Definimos o caminho mais seguro para você.',
     },
     {
-        title: '3. Planejamento',
-        copy: 'Você recebe orientação clara antes de decidir.',
-    },
-    {
-        title: '4. Tratamento',
-        copy: 'Procedimento com técnica, cuidado e acompanhamento.',
+        title: '3. Tratamento',
+        copy: 'Implante com acompanhamento até a finalização.',
     },
 ];
 
@@ -24,11 +20,11 @@ export default function ImplantJourney() {
                 <div className="mx-auto mb-10 max-w-3xl text-center md:mb-14">
                     <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Como funciona</p>
                     <h2 className="mt-5 text-3xl font-black leading-tight text-txt-primary md:text-5xl">
-                        Um caminho claro, sem promessa rasa.
+                        Três passos para decidir com clareza
                     </h2>
                 </div>
 
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                <div className="grid gap-4 md:grid-cols-3">
                     {steps.map((step) => (
                         <article
                             key={step.title}

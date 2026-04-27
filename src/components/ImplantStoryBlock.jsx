@@ -1,17 +1,17 @@
-import { SmilePlus, ShieldCheck, BadgeCheck } from 'lucide-react';
+import { SmilePlus, ShieldCheck, BadgeAlert } from 'lucide-react';
 
 const cards = [
     {
-        title: 'Mastigar com segurança',
+        title: 'Insegurança para mastigar',
         icon: ShieldCheck,
     },
     {
-        title: 'Sorrir com confiança',
+        title: 'Vergonha ao sorrir',
         icon: SmilePlus,
     },
     {
-        title: 'Ter uma solução fixa novamente',
-        icon: BadgeCheck,
+        title: 'Medo de piorar com o tempo',
+        icon: BadgeAlert,
     },
 ];
 
@@ -25,7 +25,7 @@ export default function ImplantStoryBlock() {
                         Perder um dente muda mais do que o sorriso
                     </h2>
                     <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base md:leading-8">
-                        O implante dentário em Betim pode ajudar a recuperar função, estética e confiança na rotina.
+                        A insegurança para mastigar, o desconforto social e a vergonha ao sorrir pesam na rotina. O implante pode devolver função e confiança com planejamento correto.
                     </p>
                 </div>
 

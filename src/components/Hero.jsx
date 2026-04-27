@@ -8,7 +8,7 @@ export default function Hero() {
     return (
         <section
             id="inicio"
-            className="relative flex items-center overflow-hidden bg-[radial-gradient(circle_at_85%_10%,rgba(197,160,89,0.18),transparent_42%),linear-gradient(180deg,#ffffff,#f7f3ea)] pb-10 pt-22 md:min-h-[88vh] md:pb-20 md:pt-36"
+            className="relative flex items-center overflow-hidden bg-[radial-gradient(circle_at_85%_10%,rgba(197,160,89,0.18),transparent_42%),linear-gradient(180deg,#ffffff,#f7f3ea)] pb-10 pt-22 md:min-h-[86vh] md:pb-18 md:pt-34"
         >
             <div className="pointer-events-none absolute inset-0">
                 <div className="absolute -right-20 -top-14 h-64 w-64 rounded-full bg-brand-gold/12 blur-3xl" />
@@ -30,11 +30,11 @@ export default function Hero() {
 
                         <div className="relative mb-4 overflow-hidden rounded-[28px] bg-[linear-gradient(150deg,rgba(255,255,255,0.95),rgba(244,236,220,0.85))] px-4 pb-3 pt-4 shadow-[0_20px_70px_rgba(0,0,0,0.08)] md:hidden">
                             <div className="relative z-20 max-w-[64%]">
-                                <h1 className="text-[1.95rem] font-black leading-[1.02] text-txt-primary">
-                                    Volte a mastigar com segurança
+                                <h1 className="text-[1.9rem] font-black leading-[1.03] text-txt-primary">
+                                    Implante dentário em Betim para voltar a mastigar com segurança
                                 </h1>
                                 <p className="mt-2 text-[13px] font-medium leading-5 text-gray-600">
-                                    Implante dentário em Betim com avaliação clara e planejamento individual.
+                                    Avaliação clara e planejamento individual.
                                 </p>
                             </div>
 
@@ -57,11 +57,11 @@ export default function Hero() {
                         </div>
 
                         <div className="hidden md:block">
-                            <h1 className="max-w-2xl text-[2.35rem] font-black leading-[1.03] text-txt-primary lg:text-[3.1rem]">
-                                Volte a mastigar, sorrir e viver com mais segurança
+                            <h1 className="max-w-2xl text-[2.2rem] font-black leading-[1.04] text-txt-primary lg:text-[2.85rem]">
+                                Implante dentário em Betim para voltar a mastigar com segurança
                             </h1>
                             <p className="mt-4 max-w-xl text-[16px] font-medium leading-7 text-gray-600 md:text-lg md:leading-relaxed">
-                                Implante dentário em Betim com avaliação clara, planejamento individual e condições a partir de R$150/mês*.
+                                Avaliação clara, planejamento individual e orientação direta antes de decidir.
                             </p>
                         </div>
 
@@ -131,12 +131,6 @@ export default function Hero() {
                                     className="object-contain object-bottom"
                                 />
                             </motion.div>
-                            <div className="absolute left-6 top-6 rounded-full border border-brand-gold/30 bg-white/92 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-brand-gold">
-                                Avaliação individual
-                            </div>
-                            <div className="absolute bottom-6 right-6 rounded-full border border-black/10 bg-white/90 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-txt-primary">
-                                Planejamento seguro
-                            </div>
                         </div>
                     </motion.div>
                 </div>
