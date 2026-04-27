@@ -8,10 +8,10 @@ export default function Hero() {
     return (
         <section
             id="inicio"
-            className="relative flex items-center overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(197,160,89,0.12),transparent_45%),linear-gradient(180deg,#ffffff,#f8f5ef)] pb-10 pt-22 md:min-h-[88vh] md:pb-20 md:pt-36"
+            className="relative flex items-center overflow-hidden bg-[radial-gradient(circle_at_85%_10%,rgba(197,160,89,0.18),transparent_42%),linear-gradient(180deg,#ffffff,#f7f3ea)] pb-10 pt-22 md:min-h-[88vh] md:pb-20 md:pt-36"
         >
             <div className="pointer-events-none absolute inset-0">
-                <div className="absolute -right-20 -top-14 h-64 w-64 rounded-full bg-brand-gold/10 blur-3xl" />
+                <div className="absolute -right-20 -top-14 h-64 w-64 rounded-full bg-brand-gold/12 blur-3xl" />
                 <div className="absolute -left-16 top-16 h-52 w-52 rounded-full bg-black/5 blur-3xl" />
             </div>
 
@@ -28,30 +28,31 @@ export default function Hero() {
                             Implante dentário em Betim
                         </div>
 
-                        <div className="mb-4 grid grid-cols-[1.35fr_0.9fr] items-end gap-3 md:hidden">
-                            <div>
+                        <div className="relative mb-4 overflow-hidden rounded-[28px] bg-[linear-gradient(150deg,rgba(255,255,255,0.95),rgba(244,236,220,0.85))] px-4 pb-3 pt-4 shadow-[0_20px_70px_rgba(0,0,0,0.08)] md:hidden">
+                            <div className="relative z-20 max-w-[64%]">
                                 <h1 className="text-[1.95rem] font-black leading-[1.02] text-txt-primary">
                                     Volte a mastigar com segurança
                                 </h1>
-                                <p className="mt-2 text-[14px] font-medium leading-6 text-gray-600">
+                                <p className="mt-2 text-[13px] font-medium leading-5 text-gray-600">
                                     Implante dentário em Betim com avaliação clara e planejamento individual.
                                 </p>
                             </div>
+
                             <motion.div
-                                animate={{ y: [0, -4, 0] }}
-                                transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut' }}
-                                className="relative h-36 overflow-hidden rounded-[20px] border border-black/8 bg-white p-1.5 shadow-[0_16px_50px_rgba(0,0,0,0.12)]"
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.65, delay: 0.15 }}
+                                className="pointer-events-none absolute -bottom-1 -right-2 z-10 h-[13.5rem] w-[48%]"
                             >
-                                <div className="relative h-full w-full overflow-hidden rounded-[15px]">
-                                    <Image
-                                        src="/assets/Dr Jeff_edited.avif"
-                                        alt="Dr. Jefferson Reis"
-                                        fill
-                                        priority
-                                        sizes="35vw"
-                                        className="object-cover object-top"
-                                    />
-                                </div>
+                                <div className="absolute inset-0 rounded-[42%_58%_34%_66%/52%_38%_62%_48%] bg-[linear-gradient(160deg,rgba(255,255,255,0.34),rgba(197,160,89,0.18))]" />
+                                <Image
+                                    src="/assets/Dr Jeff_edited.avif"
+                                    alt="Dr. Jefferson Reis"
+                                    fill
+                                    priority
+                                    sizes="48vw"
+                                    className="object-contain object-bottom"
+                                />
                             </motion.div>
                         </div>
 
@@ -114,29 +115,29 @@ export default function Hero() {
                         transition={{ duration: 0.65, delay: 0.12, ease: 'easeOut' }}
                         className="relative hidden lg:block"
                     >
-                        <motion.div
-                            animate={{ y: [0, -6, 0] }}
-                            transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-                            className="relative rounded-[34px] border border-white/65 bg-[linear-gradient(160deg,#ffffff,#f3eee4)] p-3 shadow-[0_30px_95px_rgba(0,0,0,0.15)]"
-                        >
-                            <div className="relative h-[34rem] overflow-hidden rounded-[28px] border border-black/6">
+                        <div className="relative h-[35rem] overflow-hidden rounded-[44px] bg-[linear-gradient(160deg,rgba(255,255,255,0.85),rgba(244,236,220,0.95))] shadow-[0_34px_95px_rgba(0,0,0,0.14)]">
+                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_18%,rgba(197,160,89,0.22),transparent_45%)]" />
+                            <motion.div
+                                animate={{ y: [0, -6, 0] }}
+                                transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+                                className="absolute inset-0"
+                            >
                                 <Image
                                     src="/assets/Dr Jeff_edited.avif"
                                     alt="Dr. Jefferson Reis"
                                     fill
                                     priority
                                     sizes="(max-width: 1200px) 45vw, 40vw"
-                                    className="object-cover object-top"
+                                    className="object-contain object-bottom"
                                 />
-                                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/20 to-transparent" />
-                            </div>
-                            <div className="absolute left-6 top-6 rounded-full border border-brand-gold/35 bg-white/95 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-brand-gold">
+                            </motion.div>
+                            <div className="absolute left-6 top-6 rounded-full border border-brand-gold/30 bg-white/92 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-brand-gold">
                                 Avaliação individual
                             </div>
                             <div className="absolute bottom-6 right-6 rounded-full border border-black/10 bg-white/90 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-txt-primary">
                                 Planejamento seguro
                             </div>
-                        </motion.div>
+                        </div>
                     </motion.div>
                 </div>
             </div>
