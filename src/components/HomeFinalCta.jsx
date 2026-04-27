@@ -4,10 +4,10 @@ export default function HomeFinalCta() {
             <div className="mx-auto max-w-5xl px-5 text-center md:px-6">
                 <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Próximo passo</p>
                 <h2 className="mt-5 text-3xl font-black leading-tight md:text-5xl">
-                    Quer entender se o implante é indicado para você?
+                    Quer saber se o implante é indicado para você?
                 </h2>
                 <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-white/70 md:text-base md:leading-8">
-                    Fale com a Clínica Inova e receba orientação inicial.
+                    Fale com a Clínica Inova e receba uma orientação inicial pelo WhatsApp.
                 </p>
                 <a
                     href="https://wa.me/553126260038"

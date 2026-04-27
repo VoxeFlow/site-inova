@@ -5,7 +5,7 @@ export const metadata = {
     metadataBase: new URL(SITE_URL),
     title: 'Implante Dentário em Betim | Clínica Inova',
     description:
-        'Implante dentário em Betim com avaliação individualizada, planejamento seguro e condições a partir de R$150/mês. Fale com a Clínica Inova.',
+        'Implante dentário em Betim com avaliação individualizada e parcelas a partir de R$150/mês. Fale com a Clínica Inova.',
     alternates: {
         canonical: 'https://www.clinicainova.com/',
     },

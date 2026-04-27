@@ -1,10 +1,10 @@
 import { CheckCircle2 } from 'lucide-react';
 
 const factors = [
-    'quantidade de dentes',
-    'condição óssea',
-    'exames',
-    'planejamento',
+    'Quantidade de dentes',
+    'Condição óssea',
+    'Exames',
+    'Planejamento',
 ];
 
 export default function ImplantInvestmentSection() {
@@ -14,21 +14,21 @@ export default function ImplantInvestmentSection() {
                 <div className="rounded-[24px] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-5 shadow-[0_24px_80px_rgba(0,0,0,0.2)] md:rounded-[34px] md:p-8">
                     <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Investimento</p>
                     <h2 className="mt-4 text-[1.85rem] font-black leading-tight md:text-5xl">
-                        Quanto custa um implante?
+                        Quanto custa um implante dentário?
                     </h2>
                     <p className="mt-4 max-w-4xl text-sm leading-7 text-white/74 md:text-base md:leading-8">
-                        O valor depende do seu caso, mas muitos tratamentos podem começar com parcelas acessíveis.
-                    </p>
-                    <p className="mt-2 max-w-4xl text-sm leading-7 text-white/70 md:text-base md:leading-8">
-                        Se você pesquisa quanto custa implante dentário, o mais seguro é validar o implante dentário preço após avaliação clínica.
-                    </p>
-                    <p className="mt-3 text-xl font-black text-white md:text-2xl">
-                        a partir de R$150/mês*
+                        O valor depende da quantidade de dentes, condição óssea, exames e planejamento. Em muitos casos, o tratamento pode começar com parcelas a partir de R$150/mês*.
                     </p>
 
-                    <ul className="mt-5 grid gap-2.5 md:grid-cols-2">
+                    <div className="mt-5 rounded-[20px] border border-brand-gold/40 bg-white/[0.03] px-4 py-4 md:max-w-xl">
+                        <p className="text-xs font-black uppercase tracking-[0.24em] text-brand-gold">Referência inicial</p>
+                        <p className="mt-2 text-3xl font-black leading-none text-white">A partir de R$150/mês*</p>
+                        <p className="mt-2 text-xs leading-6 text-white/60">Avaliação necessária para definir o valor final.</p>
+                    </div>
+
+                    <ul className="mt-6 grid gap-2.5 md:grid-cols-2">
                         {factors.map((factor) => (
-                            <li key={factor} className="flex items-start gap-3 text-sm leading-7 text-white/72">
+                            <li key={factor} className="flex items-start gap-3 text-sm leading-7 text-white/74">
                                 <CheckCircle2 className="mt-1 h-4 w-4 text-brand-gold" />
                                 <span>{factor}</span>
                             </li>
@@ -46,7 +46,7 @@ export default function ImplantInvestmentSection() {
                         *Valor inicial estimado e sujeito à avaliação. Esta informação não substitui consulta profissional.
                     </p>
                     <p className="mt-2 text-xs leading-6 text-white/42">
-                        Para entender quanto custa implante dentário e implante dentário preço de forma responsável, a avaliação define o plano, o formato de implante dentário parcelado e as etapas do tratamento.
+                        Para quem pesquisa quanto custa implante dentário, implante dentário preço e implante dentário parcelado, a avaliação clínica define o plano ideal.
                     </p>
                 </div>
             </div>
