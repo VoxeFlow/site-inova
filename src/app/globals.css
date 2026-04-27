@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-gold: #c5a059;
+  --color-brand-gold-dark: #a68545;
+  --color-txt-primary: #111111;
+  --color-whatsapp: #25D366;
+  --color-google: #DB4437;
+  --color-facebook: #1877F2;
+  --color-waze: #33CCFF;
+  
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+
+  --animate-fade-up: fadeUp 0.8s ease-out forwards;
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-scale-in: scaleIn 0.3s ease forwards;
+  --animate-intro-fade: introFade 3.6s ease forwards;
+  --animate-intro-outro: introOutro 2.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float { 
+    0%,100% {transform:translateY(0)} 
+    50% {transform:translateY(-8px)} 
+  }
+  @keyframes scaleIn {
+    from {transform:scale(0); opacity:0} 
+    to {transform:scale(1); opacity:1}
+  }
+  @keyframes introFade {
+    0% {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    14% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    78% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+  }
+  @keyframes introOutro {
+    0% {
+      opacity: 0;
+      transform: scale(0.965);
+      letter-spacing: 0.28em;
+    }
+    18% {
+      opacity: 1;
+      transform: scale(1);
+      letter-spacing: 0.28em;
+    }
+    72% {
+      opacity: 1;
+      transform: scale(1.035);
+      letter-spacing: 0.34em;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.08);
+      letter-spacing: 0.4em;
+    }
+  }
+}
+
+/* Custom Utilities */
+@utility text-shadow {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@utility glass {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@utility liquid-glass-panel {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.58), rgba(255,255,255,0.34)),
+    linear-gradient(135deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04));
+  backdrop-filter: blur(30px) saturate(145%);
+  -webkit-backdrop-filter: blur(30px) saturate(145%);
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow:
+    0 30px 90px rgba(0,0,0,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.36),
+    inset 0 -1px 0 rgba(255,255,255,0.08);
+}
+
+body {
+  @apply bg-white text-txt-primary overflow-x-hidden;
+}
+
+body.mobile-menu-open .mobile-sticky-cta,
+body.mobile-menu-open .chat-widget-root {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

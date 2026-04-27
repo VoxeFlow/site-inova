@@ -1,0 +1,436 @@
+'use client';
+import { useState, useEffect } from 'react';
+import { Calendar, Search, Plus, MoreVertical, CheckCircle, Clock, Edit2, Trash2, X, List, CalendarDays } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { clsx } from 'clsx';
+import CalendarView from '@/components/CalendarView';
+import AppointmentDetailModal from '@/components/AppointmentDetailModal';
+
+export default function AppointmentsPage() {
+    const [appointments, setAppointments] = useState([]);
+    const [dentists, setDentists] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [filterStatus, setFilterStatus] = useState('all');
+    const [filterDentist, setFilterDentist] = useState('all');
+    const [showModal, setShowModal] = useState(false);
+    const [showDetailModal, setShowDetailModal] = useState(false);
+    const [selectedAppointment, setSelectedAppointment] = useState(null);
+    const [editingId, setEditingId] = useState(null);
+    const [viewMode, setViewMode] = useState('list'); // 'list' or 'calendar'
+    const [formData, setFormData] = useState({
+        patient_name: '',
+        treatment: '',
+        date: '',
+        time: '',
+        phone: '',
+        dentist_id: '',
+        status: 'Pendente'
+    });
+
+    useEffect(() => {
+        loadData();
+    }, []);
+
+    const loadData = async () => {
+        const [apptRes, dentRes] = await Promise.all([
+            fetch('/api/appointments'),
+            fetch('/api/dentists')
+        ]);
+        const appts = await apptRes.json();
+        setAppointments(appts);
+        setDentists(await dentRes.json());
+
+        // Sync patients from appointments
+        await syncPatientsFromAppointments(appts);
+    };
+
+    const syncPatientsFromAppointments = async (appts) => {
+        try {
+            // Get existing patients
+            const patientsRes = await fetch('/api/patients');
+            const existingPatients = await patientsRes.json();
+
+            // Ensure it's an array
+            if (!Array.isArray(existingPatients)) {
+                console.error('existingPatients is not an array:', existingPatients);
+                return;
+            }
+
+            // Create patients from appointments if they don't exist
+            for (const appt of appts) {
+                const exists = existingPatients.find(p =>
+                    p.name?.toLowerCase() === appt.patient_name?.toLowerCase()
+                );
+
+                if (!exists && appt.patient_name) {
+                    await fetch('/api/patients', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            name: appt.patient_name,
+                            phone: appt.phone || '',
+                            email: '',
+                            cpf: '',
+                            birth_date: '',
+                            address: ''
+                        })
+                    });
+                }
+            }
+        } catch (error) {
+            console.error('syncPatientsFromAppointments error:', error);
+        }
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const dentist = dentists.find(d => d.id === parseInt(formData.dentistId));
+        const payload = {
+            ...formData,
+            dentistName: dentist?.name || 'Não atribuído',
+            slot: `${formData.date} às ${formData.time}`
+        };
+
+        if (editingId) {
+            await fetch('/api/appointments', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: editingId, ...payload })
+            });
+        } else {
+            await fetch('/api/appointments', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+        }
+
+        setShowModal(false);
+        setEditingId(null);
+        setFormData({ name: '', treatment: '', date: '', time: '', phone: '', dentistId: '', status: 'Pendente' });
+        loadData();
+    };
+
+    const handleEdit = (appt) => {
+        setEditingId(appt.id);
+        setFormData({
+            name: appt.name,
+            treatment: appt.treatment || appt.treat,
+            date: appt.date?.split(' ')[0] || '',
+            time: appt.time || '',
+            phone: appt.phone || '',
+            dentistId: appt.dentistId || '',
+            status: appt.status
+        });
+        setShowModal(true);
+    };
+
+    const handleDelete = async (id) => {
+        if (!confirm('Deseja realmente excluir este agendamento?')) return;
+        await fetch(`/api/appointments?id=${id}`, { method: 'DELETE' });
+        loadData();
+    };
+
+    const handleCreateFromCalendar = (slotData) => {
+        setFormData({
+            ...formData,
+            date: slotData.date,
+            time: slotData.time
+        });
+        setShowModal(true);
+    };
+
+    const filteredAppointments = appointments.filter(appt => {
+        const matchesSearch = appt.name?.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesStatus = filterStatus === 'all' || appt.status === filterStatus;
+        return matchesSearch && matchesStatus;
+    });
+
+    const stats = {
+        today: appointments.filter(a => a.date?.includes(new Date().toLocaleDateString('pt-BR').slice(0, 5))).length,
+        week: appointments.length,
+        confirmed: appointments.filter(a => a.status === 'Confirmado').length,
+        pending: appointments.filter(a => a.status === 'Pendente').length
+    };
+
+    return (
+        <div>
+            <header className="flex justify-between items-center mb-8">
+                <div>
+                    <h1 className="text-2xl font-black text-gray-800">Agendamentos</h1>
+                    <p className="text-gray-500 text-sm">Gerencie os pacientes da clínica em tempo real.</p>
+                </div>
+                <div className="flex gap-3">
+                    <div className="flex bg-gray-100 rounded-lg p-1">
+                        <button
+                            onClick={() => setViewMode('list')}
+                            className={clsx(
+                                "px-3 py-2 rounded-lg font-bold text-sm transition flex items-center gap-2",
+                                viewMode === 'list' ? "bg-white shadow-sm" : "text-gray-500"
+                            )}
+                        >
+                            <List size={16} /> Lista
+                        </button>
+                        <button
+                            onClick={() => setViewMode('calendar')}
+                            className={clsx(
+                                "px-3 py-2 rounded-lg font-bold text-sm transition flex items-center gap-2",
+                                viewMode === 'calendar' ? "bg-white shadow-sm" : "text-gray-500"
+                            )}
+                        >
+                            <CalendarDays size={16} /> Agenda
+                        </button>
+                    </div>
+                    <button
+                        onClick={() => { setShowModal(true); setEditingId(null); }}
+                        className="px-4 py-2 bg-brand-gold text-white font-bold rounded-lg hover:bg-brand-gold-dark transition shadow-lg shadow-brand-gold/20 flex items-center gap-2"
+                    >
+                        <Plus size={18} /> Novo Agendamento
+                    </button>
+                </div>
+            </header>
+
+            {/* Stats */}
+            <div className="grid grid-cols-4 gap-4 mb-8">
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <div className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">Hoje</div>
+                    <div className="text-3xl font-black text-gray-800">{stats.today}</div>
+                    <div className="text-green-500 text-xs font-bold mt-2 flex items-center gap-1">
+                        <CheckCircle size={12} /> {stats.confirmed} Confirmados
+                    </div>
+                </div>
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <div className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">Total</div>
+                    <div className="text-3xl font-black text-gray-800">{stats.week}</div>
+                    <div className="text-brand-gold text-xs font-bold mt-2 flex items-center gap-1">
+                        <Clock size={12} /> {stats.pending} Pendentes
+                    </div>
+                </div>
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <div className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">Taxa de Ocupação</div>
+                    <div className="text-3xl font-black text-gray-800">85%</div>
+                    <div className="text-gray-400 text-xs mt-2">Scarcity Mode Ativo</div>
+                </div>
+                <div className="bg-gradient-to-br from-gray-800 to-black text-white p-6 rounded-2xl shadow-sm border border-gray-800">
+                    <div className="text-white/60 text-xs font-bold uppercase tracking-wider mb-2">Faturamento Est.</div>
+                    <div className="text-3xl font-black text-brand-gold">R$ 25k</div>
+                    <div className="text-white/60 text-xs mt-2">Esta semana</div>
+                </div>
+            </div>
+
+            {/* Filters - Only show in list view */}
+            {viewMode === 'list' && (
+                <div className="flex gap-3 mb-6">
+                    <div className="flex-1 relative">
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                        <input
+                            type="text"
+                            placeholder="Buscar paciente..."
+                            value={searchTerm}
+                            onChange={e => setSearchTerm(e.target.value)}
+                            className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg outline-none focus:border-brand-gold"
+                        />
+                    </div>
+                    <select
+                        value={filterStatus}
+                        onChange={e => setFilterStatus(e.target.value)}
+                        className="px-4 py-2 border border-gray-200 rounded-lg outline-none focus:border-brand-gold font-bold text-sm"
+                    >
+                        <option value="all">Todos Status</option>
+                        <option value="Confirmado">Confirmado</option>
+                        <option value="Pendente">Pendente</option>
+                        <option value="Cancelado">Cancelado</option>
+                    </select>
+                </div>
+            )}
+
+            {/* Calendar View */}
+            {viewMode === 'calendar' && (
+                <CalendarView
+                    appointments={appointments}
+                    dentists={dentists}
+                    onCreateAppointment={handleCreateFromCalendar}
+                    onEditAppointment={handleEdit}
+                />
+            )}
+
+            {/* Table View */}
+            {viewMode === 'list' && (
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <table className="w-full text-left">
+                        <thead className="bg-gray-50 border-b border-gray-100">
+                            <tr>
+                                <th className="p-4 py-3 text-xs font-bold text-gray-400 uppercase tracking-widest pl-8">Paciente</th>
+                                <th className="p-4 py-3 text-xs font-bold text-gray-400 uppercase tracking-widest">Tratamento</th>
+                                <th className="p-4 py-3 text-xs font-bold text-gray-400 uppercase tracking-widest">Dentista</th>
+                                <th className="p-4 py-3 text-xs font-bold text-gray-400 uppercase tracking-widest">Data/Hora</th>
+                                <th className="p-4 py-3 text-xs font-bold text-gray-400 uppercase tracking-widest">Status</th>
+                                <th className="p-4 py-3 text-xs font-bold text-gray-400 uppercase tracking-widest text-right pr-8">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-50">
+                            {filteredAppointments.map((item) => (
+                                <tr key={item.id} className="hover:bg-gray-50/50 transition cursor-pointer group">
+                                    <td className="p-4 pl-8 flex items-center gap-3">
+                                        <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center font-bold text-gray-500 text-xs group-hover:bg-white border border-transparent group-hover:border-gray-200 transition">
+                                            {item.patient_name?.slice(0, 2).toUpperCase() || 'PX'}
+                                        </div>
+                                        <div>
+                                            <div className="font-bold text-gray-700">{item.patient_name}</div>
+                                            {item.phone && <div className="text-xs text-gray-400">{item.phone}</div>}
+                                        </div>
+                                    </td>
+                                    <td className="p-4 text-sm font-medium text-gray-500">{item.treatment}</td>
+                                    <td className="p-4 text-sm font-medium text-gray-500">{item.dentist_name || 'Não atribuído'}</td>
+                                    <td className="p-4 text-sm font-medium text-gray-500">
+                                        <div className="font-bold text-gray-700">{item.date}</div>
+                                        <div className="text-xs text-gray-400">{item.time}</div>
+                                    </td>
+                                    <td className="p-4">
+                                        <span className={clsx(
+                                            "px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide border",
+                                            item.status === 'Confirmado' && 'bg-green-50 text-green-600 border-green-100',
+                                            item.status === 'Pendente' && 'bg-yellow-50 text-yellow-600 border-yellow-100',
+                                            item.status === 'Cancelado' && 'bg-red-50 text-red-600 border-red-100'
+                                        )}>
+                                            {item.status}
+                                        </span>
+                                    </td>
+                                    <td className="p-4 text-right pr-8">
+                                        <div className="flex items-center justify-end gap-2">
+                                            <button
+                                                onClick={() => handleEdit(item)}
+                                                className="p-2 hover:bg-gray-100 rounded-lg transition"
+                                            >
+                                                <Edit2 size={16} className="text-gray-400" />
+                                            </button>
+                                            <button
+                                                onClick={() => handleDelete(item.id)}
+                                                className="p-2 hover:bg-red-50 rounded-lg transition"
+                                            >
+                                                <Trash2 size={16} className="text-red-400" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            )}
+
+            {/* Modal */}
+            <AnimatePresence>
+                {showModal && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                            onClick={() => setShowModal(false)}
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            className="bg-white w-full max-w-2xl p-8 rounded-2xl shadow-2xl relative z-10"
+                        >
+                            <div className="flex justify-between items-center mb-6">
+                                <h2 className="text-2xl font-black">{editingId ? 'Editar' : 'Novo'} Agendamento</h2>
+                                <button onClick={() => setShowModal(false)} className="p-2 hover:bg-gray-100 rounded-lg">
+                                    <X size={20} />
+                                </button>
+                            </div>
+                            <form onSubmit={handleSubmit} className="space-y-4">
+                                <div className="grid grid-cols-2 gap-4">
+                                    <input
+                                        type="text"
+                                        placeholder="Nome do Paciente"
+                                        value={formData.name}
+                                        onChange={e => setFormData({ ...formData, name: e.target.value })}
+                                        className="p-3 border border-gray-200 rounded-lg outline-none focus:border-brand-gold"
+                                        required
+                                    />
+                                    <input
+                                        type="tel"
+                                        placeholder="Telefone"
+                                        value={formData.phone}
+                                        onChange={e => setFormData({ ...formData, phone: e.target.value })}
+                                        className="p-3 border border-gray-200 rounded-lg outline-none focus:border-brand-gold"
+                                        required
+                                    />
+                                </div>
+                                <select
+                                    value={formData.treatment}
+                                    onChange={e => setFormData({ ...formData, treatment: e.target.value })}
+                                    className="w-full p-3 border border-gray-200 rounded-lg outline-none focus:border-brand-gold"
+                                    required
+                                >
+                                    <option value="">Selecione o Tratamento</option>
+                                    <option value="Implantes">Implantes</option>
+                                    <option value="Invisalign">Invisalign</option>
+                                    <option value="Estética Geral">Estética Geral</option>
+                                    <option value="Clínica Geral">Clínica Geral</option>
+                                    <option value="ATM">ATM</option>
+                                </select>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <input
+                                        type="date"
+                                        value={formData.date}
+                                        onChange={e => setFormData({ ...formData, date: e.target.value })}
+                                        className="p-3 border border-gray-200 rounded-lg outline-none focus:border-brand-gold"
+                                        required
+                                    />
+                                    <input
+                                        type="time"
+                                        value={formData.time}
+                                        onChange={e => setFormData({ ...formData, time: e.target.value })}
+                                        className="p-3 border border-gray-200 rounded-lg outline-none focus:border-brand-gold"
+                                        required
+                                    />
+                                </div>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <select
+                                        value={formData.dentistId}
+                                        onChange={e => setFormData({ ...formData, dentistId: e.target.value })}
+                                        className="p-3 border border-gray-200 rounded-lg outline-none focus:border-brand-gold"
+                                    >
+                                        <option value="">Selecione o Dentista</option>
+                                        {dentists.map(d => (
+                                            <option key={d.id} value={d.id}>{d.name}</option>
+                                        ))}
+                                    </select>
+                                    <select
+                                        value={formData.status}
+                                        onChange={e => setFormData({ ...formData, status: e.target.value })}
+                                        className="p-3 border border-gray-200 rounded-lg outline-none focus:border-brand-gold"
+                                    >
+                                        <option value="Pendente">Pendente</option>
+                                        <option value="Confirmado">Confirmado</option>
+                                        <option value="Cancelado">Cancelado</option>
+                                    </select>
+                                </div>
+                                <div className="flex gap-3 pt-4">
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowModal(false)}
+                                        className="flex-1 py-3 border border-gray-200 rounded-lg font-bold hover:bg-gray-50 transition"
+                                    >
+                                        Cancelar
+                                    </button>
+                                    <button
+                                        type="submit"
+                                        className="flex-1 py-3 bg-brand-gold text-white rounded-lg font-bold hover:bg-brand-gold-dark transition"
+                                    >
+                                        {editingId ? 'Salvar' : 'Criar'} Agendamento
+                                    </button>
+                                </div>
+                            </form>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+}
