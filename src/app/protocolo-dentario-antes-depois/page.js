@@ -106,6 +106,17 @@ export default function ProtocoloAntesDepoisPage() {
                         >
                             Quero entender meu caso
                         </Link>
+                        <div className="mt-5 flex flex-wrap gap-2">
+                            <Link href="/implante-dentario-betim" className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-gray-700">
+                                Implante dentário
+                            </Link>
+                            <Link href="/quanto-custa-implante-dentario-betim" className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-gray-700">
+                                Quanto custa implante
+                            </Link>
+                            <Link href="/dentista-implante-betim" className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-gray-700">
+                                Dentista para implante
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>

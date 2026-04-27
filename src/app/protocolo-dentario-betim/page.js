@@ -117,6 +117,8 @@ export default function ProtocoloDentarioBetimPage() {
                 { href: '/implante-protocolo-all-on-4-betim', label: 'Implante protocolo All-on-4 em Betim' },
                 { href: '/protocolo-dentario-preco-betim', label: 'Preço do protocolo dentário' },
                 { href: '/implante-dentario-betim', label: 'Implante dentário em Betim' },
+                { href: '/quanto-custa-implante-dentario-betim', label: 'Quanto custa implante dentário' },
+                { href: '/dentista-implante-betim', label: 'Dentista para implante em Betim' },
             ]}
         />
     );

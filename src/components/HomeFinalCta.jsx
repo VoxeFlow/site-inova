@@ -21,6 +21,9 @@ export default function HomeFinalCta() {
                     <Link href="/implante-dentario-betim" className="rounded-full border border-white/18 bg-white/[0.04] px-4 py-2 text-white/85 transition hover:bg-white/[0.1]">
                         Implante
                     </Link>
+                    <Link href="/quanto-custa-implante-dentario-betim" className="rounded-full border border-white/18 bg-white/[0.04] px-4 py-2 text-white/85 transition hover:bg-white/[0.1]">
+                        Quanto custa implante
+                    </Link>
                     <Link href="/protocolo-dentario-betim" className="rounded-full border border-white/18 bg-white/[0.04] px-4 py-2 text-white/85 transition hover:bg-white/[0.1]">
                         Protocolo
                     </Link>
