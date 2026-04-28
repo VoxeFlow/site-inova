@@ -95,7 +95,7 @@ function PrimaryCta({ label = 'Quero avaliar meu caso Invisalign', className = '
         <Link
             href={WHATSAPP_URL}
             target="_blank"
-            className={`inline-flex min-h-12 items-center justify-center rounded-full bg-[#0f172a] px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-[#0ea5e9] ${className}`}
+            className={`inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold ${className}`}
         >
             {label}
         </Link>
@@ -201,7 +201,7 @@ export default function InvisalignBetimPage() {
                         {quizCards.map((item) => (
                             <article key={item.title} className="rounded-2xl border border-white/12 bg-white/[0.05] p-5 transition hover:bg-white/[0.08]">
                                 <h3 className="text-base font-black text-white">{item.title}</h3>
-                                <p className="mt-2 text-sm leading-7 text-white/75">{item.text}</p>
+                                <p className="mt-2 text-sm leading-7 text-white/90">{item.text}</p>
                             </article>
                         ))}
                     </div>
@@ -210,6 +210,34 @@ export default function InvisalignBetimPage() {
 
             <section className="bg-white py-14 md:py-18">
                 <div className="mx-auto grid max-w-6xl gap-5 px-5 md:px-6">
+                    <article className="rounded-[24px] border border-[#dbefff] bg-[#f7fcff] p-6 md:p-8">
+                        <h2 className="text-2xl font-black leading-tight md:text-3xl">Tecnologia Invisalign em ação</h2>
+                        <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base md:leading-8">
+                            Uma experiência visual mais moderna para mostrar como os alinhadores funcionam na prática, com foco em discrição e previsibilidade.
+                        </p>
+                        <div className="mt-5 grid gap-4 md:grid-cols-[1.05fr_0.95fr]">
+                            <div className="relative h-64 overflow-hidden rounded-2xl border border-[#dbefff] bg-white md:h-80">
+                                <Image
+                                    src="/assets/Invisalign_TreatableCases_070_cosmetic_900x600__1_.gif"
+                                    alt="Simulação de alinhamento com tecnologia Invisalign"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 55vw"
+                                    className="object-cover"
+                                    unoptimized
+                                />
+                            </div>
+                            <div className="relative h-64 overflow-hidden rounded-2xl border border-[#dbefff] bg-white md:h-80">
+                                <Image
+                                    src="/assets/img-alinhadores.jpeg"
+                                    alt="Alinhadores invisíveis em atendimento clínico"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 45vw"
+                                    className="object-cover"
+                                />
+                            </div>
+                        </div>
+                    </article>
+
                     <div className="grid gap-5 md:grid-cols-2">
                         <article className="rounded-[24px] border border-[#dbefff] bg-[#f7fcff] p-6 md:p-8">
                             <h2 className="text-2xl font-black leading-tight md:text-3xl">Invisalign x aparelho fixo</h2>
@@ -298,7 +326,7 @@ export default function InvisalignBetimPage() {
                             Fale com a Clínica Inova e receba orientação inicial clara sobre indicação, etapas e investimento do seu tratamento Invisalign em Betim.
                         </p>
                         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                            <PrimaryCta className="bg-white text-[#0f172a] hover:bg-[#dff3ff]" label="Falar com a clínica agora" />
+                            <PrimaryCta className="bg-brand-gold text-white hover:bg-brand-gold-dark" label="Falar com a clínica agora" />
                             <Link
                                 href="/alinhadores-invisiveis-betim"
                                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/35 px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-white/10"
