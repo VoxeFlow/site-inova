@@ -27,6 +27,15 @@ export default function HomeFinalCta() {
                     <Link href="/protocolo-dentario-betim" className="rounded-full border border-white/18 bg-white/[0.04] px-4 py-2 text-white/85 transition hover:bg-white/[0.1]">
                         Protocolo
                     </Link>
+                    <Link href="/clareamento-dental-betim" className="rounded-full border border-white/18 bg-white/[0.04] px-4 py-2 text-white/85 transition hover:bg-white/[0.1]">
+                        Clareamento
+                    </Link>
+                    <Link href="/invisalign-betim" className="rounded-full border border-white/18 bg-white/[0.04] px-4 py-2 text-white/85 transition hover:bg-white/[0.1]">
+                        Invisalign
+                    </Link>
+                    <Link href="/alinhadores-invisiveis-betim" className="rounded-full border border-white/18 bg-white/[0.04] px-4 py-2 text-white/85 transition hover:bg-white/[0.1]">
+                        Alinhadores
+                    </Link>
                 </div>
             </div>
         </section>

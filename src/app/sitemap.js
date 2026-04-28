@@ -15,10 +15,12 @@ const routes = [
     '/implante-protocolo-all-on-4-betim',
     '/protocolo-dentario-preco-betim',
     '/protocolo-dentario-antes-depois',
+    '/clareamento-dental-betim',
+    '/invisalign-betim',
+    '/alinhadores-invisiveis-betim',
+    '/invisalign-doctor-betim',
     '/dentista-em-betim',
     '/alinhador-invisivel-betim',
-    '/invisalign-betim',
-    '/clareamento-dental-betim',
 ];
 
 export default function sitemap() {

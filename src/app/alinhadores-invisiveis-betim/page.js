@@ -14,54 +14,37 @@ import {
 } from '@/lib/seo';
 
 const faqItems = [
-    { q: 'Invisalign funciona mesmo?', a: 'Quando bem indicado e acompanhado, pode corrigir alinhamento com boa previsibilidade.' },
-    { q: 'Invisalign dói?', a: 'Pode haver desconforto leve na adaptação e nas trocas das placas, geralmente temporário.' },
-    { q: 'Quanto tempo dura o tratamento?', a: 'O tempo varia conforme a complexidade do caso e a adesão ao uso correto dos alinhadores.' },
-    { q: 'É melhor que aparelho fixo?', a: 'Depende do caso. Invisalign pode oferecer mais discrição e conforto em muitas situações.' },
+    { q: 'Alinhador funciona?', a: 'Quando bem indicado e acompanhado, pode corrigir alinhamento com boa previsibilidade.' },
+    { q: 'Quanto custa?', a: 'O valor depende da complexidade do caso e do planejamento necessário.' },
+    { q: 'Demora quanto tempo?', a: 'O tempo varia conforme o grau de desalinhamento e adesão ao uso das placas.' },
+    { q: 'Posso tirar os alinhadores?', a: 'Sim, os alinhadores são removíveis para alimentação e higiene.' },
 ];
 
 export const metadata = buildMetadata({
-    title: 'Invisalign em Betim | Alinhadores Invisíveis',
+    title: 'Alinhadores Invisíveis em Betim | Clínica Inova',
     description:
-        'Invisalign em Betim para alinhar os dentes com discrição, conforto e planejamento digital individualizado.',
-    path: '/invisalign-betim',
-    keywords: ['invisalign betim', 'invisalign doctor betim', 'aparelho invisivel betim'],
+        'Alinhadores invisíveis em Betim para corrigir o sorriso com discrição, conforto e planejamento individual.',
+    path: '/alinhadores-invisiveis-betim',
+    keywords: ['alinhadores invisíveis betim', 'aparelho invisível preço betim', 'alinhador transparente betim'],
 });
 
-function MidCta() {
-    return (
-        <div className="my-8 rounded-[22px] border border-brand-gold/35 bg-[#f7f3ea] px-5 py-5 md:my-10 md:px-6">
-            <p className="text-sm font-semibold leading-7 text-txt-primary">
-                Quer saber se Invisalign é indicado para você?
-            </p>
-            <Link
-                href="https://wa.me/553126260038"
-                target="_blank"
-                className="mt-4 inline-flex min-h-11 items-center justify-center rounded-full bg-txt-primary px-5 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-brand-gold"
-            >
-                Quero saber se Invisalign é pra mim
-            </Link>
-        </div>
-    );
-}
-
-export default function InvisalignBetimPage() {
+export default function AlinhadoresInvisiveisBetimPage() {
     return (
         <main className="min-h-screen bg-white pb-24 text-txt-primary selection:bg-brand-gold selection:text-white md:pb-0">
             <JsonLd data={buildDentistSchema()} />
             <JsonLd
                 data={buildServiceSchema({
-                    name: 'Invisalign em Betim',
+                    name: 'Alinhadores invisíveis em Betim',
                     description:
-                        'Página sobre Invisalign em Betim com foco em indicação, conforto e planejamento ortodôntico digital.',
-                    path: '/invisalign-betim',
+                        'Página sobre alinhadores invisíveis em Betim para pacientes que buscam discrição e conforto.',
+                    path: '/alinhadores-invisiveis-betim',
                 })}
             />
             <JsonLd data={buildFaqSchema(faqItems)} />
             <JsonLd
                 data={buildBreadcrumbSchema([
                     { name: 'Início', path: '/' },
-                    { name: 'Invisalign em Betim', path: '/invisalign-betim' },
+                    { name: 'Alinhadores invisíveis em Betim', path: '/alinhadores-invisiveis-betim' },
                 ])}
             />
 
@@ -69,19 +52,19 @@ export default function InvisalignBetimPage() {
 
             <section className="bg-[linear-gradient(180deg,#f8f6f2,white)] pb-14 pt-28 md:pb-18 md:pt-34">
                 <div className="mx-auto max-w-6xl px-5 md:px-6">
-                    <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Ortodontia discreta</p>
+                    <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Ortodontia estética</p>
                     <h1 className="mt-5 max-w-4xl text-4xl font-black leading-tight md:text-6xl">
-                        Invisalign em Betim: alinhe seus dentes com discrição
+                        Alinhadores invisíveis em Betim para corrigir seu sorriso com discrição
                     </h1>
                     <p className="mt-5 max-w-3xl text-sm leading-7 text-gray-600 md:text-lg md:leading-8">
-                        Para quem quer corrigir alinhamento sem fios e braquetes aparentes. Os alinhadores são removíveis, mais discretos e planejados digitalmente.
+                        Para quem quer alinhar dentes tortos com placas transparentes removíveis e mais conforto na rotina.
                     </p>
                     <Link
                         href="https://wa.me/553126260038"
                         target="_blank"
                         className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold"
                     >
-                        Quero saber se Invisalign é pra mim
+                        Quero alinhar meu sorriso
                     </Link>
                 </div>
             </section>
@@ -89,43 +72,27 @@ export default function InvisalignBetimPage() {
             <section className="bg-white py-14 md:py-18">
                 <div className="mx-auto max-w-6xl px-5 md:px-6 grid gap-5">
                     <article className="rounded-[24px] border border-black/8 bg-[#fbfaf8] p-6 md:p-8">
-                        <h2 className="text-2xl font-black leading-tight md:text-3xl">O que é Invisalign</h2>
+                        <h2 className="text-2xl font-black leading-tight md:text-3xl">O que são alinhadores</h2>
                         <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base md:leading-8">
-                            Invisalign é um sistema de alinhadores transparentes removíveis, sem fios e sem braquetes metálicos, planejado com tecnologia digital.
+                            São placas transparentes, removíveis e planejadas para movimentar os dentes sem a aparência de aparelho fixo tradicional.
                         </p>
                     </article>
-
                     <article className="rounded-[24px] border border-black/8 bg-[#fbfaf8] p-6 md:p-8">
-                        <h2 className="text-2xl font-black leading-tight md:text-3xl">Vantagens</h2>
+                        <h2 className="text-2xl font-black leading-tight md:text-3xl">Diferença para aparelho fixo</h2>
                         <ul className="mt-4 grid gap-2 text-sm leading-7 text-gray-700 md:text-base md:leading-8">
-                            <li>Quase invisível no dia a dia</li>
-                            <li>Mais confortável para muitos pacientes</li>
-                            <li>Removível para comer e higienizar</li>
+                            <li>Sem metal aparente</li>
+                            <li>Mais conforto em muitos casos</li>
+                            <li>Mais discrição no dia a dia</li>
                         </ul>
                     </article>
-
-                    <MidCta />
-
-                    <div className="grid gap-5 md:grid-cols-2">
-                        <article className="rounded-[24px] border border-black/8 bg-[#fbfaf8] p-6 md:p-8">
-                            <h2 className="text-2xl font-black leading-tight md:text-3xl">Para quem é indicado</h2>
-                            <ul className="mt-4 grid gap-2 text-sm leading-7 text-gray-700 md:text-base md:leading-8">
-                                <li>Adultos que buscam discrição</li>
-                                <li>Quem não quer aparelho metálico aparente</li>
-                                <li>Casos leves a moderados</li>
-                            </ul>
-                        </article>
-
-                        <article className="rounded-[24px] border border-black/8 bg-[#fbfaf8] p-6 md:p-8">
-                            <h2 className="text-2xl font-black leading-tight md:text-3xl">Cronograma</h2>
-                            <ul className="mt-4 grid gap-2 text-sm leading-7 text-gray-700 md:text-base md:leading-8">
-                                <li>Trocas periódicas de placas</li>
-                                <li>Acompanhamentos regulares</li>
-                                <li>Ajustes conforme evolução</li>
-                            </ul>
-                        </article>
-                    </div>
-
+                    <article className="rounded-[24px] border border-black/8 bg-[#fbfaf8] p-6 md:p-8">
+                        <h2 className="text-2xl font-black leading-tight md:text-3xl">Para quem é indicado</h2>
+                        <ul className="mt-4 grid gap-2 text-sm leading-7 text-gray-700 md:text-base md:leading-8">
+                            <li>Adultos</li>
+                            <li>Adolescentes</li>
+                            <li>Quem busca discrição</li>
+                        </ul>
+                    </article>
                     <article className="rounded-[24px] border border-black/8 bg-[#fbfaf8] p-6 md:p-8">
                         <h2 className="text-2xl font-black leading-tight md:text-3xl">FAQ</h2>
                         <div className="mt-4 grid gap-3">
@@ -137,10 +104,9 @@ export default function InvisalignBetimPage() {
                             ))}
                         </div>
                     </article>
-
                     <article className="rounded-[24px] border border-black/8 bg-[#fbfaf8] p-6 md:p-8">
                         <div className="flex flex-wrap gap-2">
-                            <Link href="/alinhadores-invisiveis-betim" className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-gray-700">Alinhadores invisíveis</Link>
+                            <Link href="/invisalign-betim" className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-gray-700">Invisalign</Link>
                             <Link href="/invisalign-doctor-betim" className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-gray-700">Invisalign Doctor</Link>
                             <Link href="/implante-dentario-betim" className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-gray-700">Implante</Link>
                             <Link href="/protocolo-dentario-betim" className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-gray-700">Protocolo</Link>
