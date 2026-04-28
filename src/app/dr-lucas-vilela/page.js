@@ -99,7 +99,7 @@ export default function DrLucasVilelaPage() {
 
             <section className="bg-[radial-gradient(circle_at_top_left,rgba(197,164,126,0.2),transparent_42%),linear-gradient(180deg,#f8f6f2,#fff)] pb-16 pt-28 md:pb-24 md:pt-36">
                 <div className="mx-auto grid max-w-6xl gap-8 px-5 md:grid-cols-[1fr_0.95fr] md:items-center md:px-6">
-                    <div>
+                    <div className="motion-safe:animate-fade-up">
                         <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Especialista em implante dentário em Betim</p>
                         <h1 className="mt-5 text-4xl font-black leading-[1.02] md:text-6xl">Dr. Lucas Vilela</h1>
                         <p className="mt-5 max-w-3xl text-sm leading-7 text-gray-700 md:text-lg md:leading-8">
@@ -113,14 +113,14 @@ export default function DrLucasVilelaPage() {
                             <PrimaryCta />
                             <Link
                                 href="#como-funciona"
-                                className="inline-flex min-h-12 items-center justify-center rounded-full border border-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-txt-primary transition hover:bg-txt-primary hover:text-white"
+                                className="inline-flex min-h-12 items-center justify-center rounded-full border border-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-txt-primary transition hover:-translate-y-0.5 hover:bg-txt-primary hover:text-white"
                             >
                                 Entender como funciona o implante
                             </Link>
                         </div>
                     </div>
 
-                    <div className="rounded-[30px] border border-black/8 bg-white p-3 shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
+                    <div className="rounded-[30px] border border-black/8 bg-white p-3 shadow-[0_24px_80px_rgba(0,0,0,0.08)] transition duration-500 hover:-translate-y-1 motion-safe:animate-fade-up">
                         <div className="relative h-72 overflow-hidden rounded-[22px] md:h-[33rem]">
                             <Image
                                 src="/assets/Dr Lucas Vilela.jpeg"
@@ -140,7 +140,7 @@ export default function DrLucasVilelaPage() {
 
             <section className="bg-white py-14 md:py-18">
                 <div className="mx-auto max-w-6xl px-5 md:px-6">
-                    <article className="rounded-[28px] border border-black/8 bg-[#fbfaf8] p-6 md:p-10">
+                    <article className="rounded-[28px] border border-black/8 bg-[#fbfaf8] p-6 transition duration-500 hover:shadow-[0_16px_40px_rgba(0,0,0,0.06)] md:p-10 motion-safe:animate-fade-up">
                         <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Trajetória</p>
                         <h2 className="mt-4 text-3xl font-black leading-tight md:text-4xl">Uma trajetória construída com precisão e responsabilidade</h2>
                         <p className="mt-5 text-sm leading-7 text-gray-700 md:text-base md:leading-8">
@@ -162,7 +162,7 @@ export default function DrLucasVilelaPage() {
                     <h2 className="mt-4 text-3xl font-black leading-tight md:text-4xl">Formação e atuação</h2>
                     <div className="mt-6 grid gap-4 md:grid-cols-2">
                         {credentials.map((item) => (
-                            <article key={item} className="rounded-2xl border border-black/8 bg-white p-5 text-sm font-semibold leading-7 text-gray-700 md:text-base">
+                            <article key={item} className="rounded-2xl border border-black/8 bg-white p-5 text-sm font-semibold leading-7 text-gray-700 transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(0,0,0,0.06)] md:text-base">
                                 {item}
                             </article>
                         ))}
@@ -172,7 +172,7 @@ export default function DrLucasVilelaPage() {
 
             <section id="como-funciona" className="bg-white py-14 md:py-18">
                 <div className="mx-auto max-w-6xl px-5 md:px-6">
-                    <article className="rounded-[28px] border border-black/8 bg-[#fbfaf8] p-6 md:p-10">
+                    <article className="rounded-[28px] border border-black/8 bg-[#fbfaf8] p-6 transition duration-500 hover:shadow-[0_16px_40px_rgba(0,0,0,0.06)] md:p-10 motion-safe:animate-fade-up">
                         <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Filosofia de tratamento</p>
                         <h2 className="mt-4 text-3xl font-black leading-tight md:text-4xl">Como o tratamento é conduzido</h2>
                         <p className="mt-5 text-sm leading-7 text-gray-700 md:text-base md:leading-8">
@@ -210,7 +210,7 @@ export default function DrLucasVilelaPage() {
                         </p>
 
                         <div className="mt-7 grid gap-5 md:grid-cols-[1.05fr_0.95fr]">
-                            <article className="rounded-[24px] border border-black/8 bg-[#fbfaf8] p-4">
+                            <article className="rounded-[24px] border border-black/8 bg-[#fbfaf8] p-4 transition duration-500 hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
                                 <div className="relative h-72 overflow-hidden rounded-2xl border border-black/8 md:h-[30rem]">
                                     <Image
                                         src={featuredPatient.src}
@@ -231,7 +231,7 @@ export default function DrLucasVilelaPage() {
 
                             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-1">
                                 {compactStories.map((item) => (
-                                    <article key={item.filename} className="rounded-2xl border border-black/8 bg-[#fbfaf8] p-3">
+                                    <article key={item.filename} className="rounded-2xl border border-black/8 bg-[#fbfaf8] p-3 transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(0,0,0,0.06)]">
                                         <div className="relative h-40 overflow-hidden rounded-xl border border-black/8">
                                             <Image
                                                 src={item.src}
@@ -255,7 +255,7 @@ export default function DrLucasVilelaPage() {
 
             <section className="bg-[#f7f4ef] py-14 md:py-18">
                 <div className="mx-auto max-w-6xl px-5 md:px-6">
-                    <article className="rounded-[28px] border border-black/8 bg-white p-6 md:p-10">
+                    <article className="rounded-[28px] border border-black/8 bg-white p-6 transition duration-500 hover:shadow-[0_16px_40px_rgba(0,0,0,0.06)] md:p-10 motion-safe:animate-fade-up">
                         <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Implante dentário em Betim</p>
                         <h2 className="mt-4 text-3xl font-black leading-tight md:text-4xl">Para quem busca implante dentário</h2>
                         <p className="mt-5 text-sm leading-7 text-gray-700 md:text-base md:leading-8">
@@ -274,7 +274,7 @@ export default function DrLucasVilelaPage() {
 
             <section className="bg-white py-14 md:py-18">
                 <div className="mx-auto max-w-6xl px-5 md:px-6">
-                    <article className="rounded-[28px] border border-black/8 bg-[#fbfaf8] p-6 md:p-10">
+                    <article className="rounded-[28px] border border-black/8 bg-[#fbfaf8] p-6 transition duration-500 hover:shadow-[0_16px_40px_rgba(0,0,0,0.06)] md:p-10">
                         <h2 className="text-2xl font-black leading-tight md:text-3xl">Perguntas frequentes</h2>
                         <div className="mt-4 grid gap-3">
                             {faqItems.map((faq) => (
