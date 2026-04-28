@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -56,13 +57,13 @@ export default function InvisalignDoctorBetimPage() {
                     <p className="mt-5 max-w-3xl text-sm leading-7 text-gray-600 md:text-lg md:leading-8">
                         Invisalign Doctor é um profissional certificado para conduzir planejamento digital e acompanhamento adequado em casos com alinhadores transparentes.
                     </p>
-                    <Link
+                    <WhatsAppTrackedLink
                         href="https://wa.me/553126260038"
                         target="_blank"
                         className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold"
                     >
                         Quero avaliar meu caso
-                    </Link>
+                    </WhatsAppTrackedLink>
                 </div>
             </section>
 

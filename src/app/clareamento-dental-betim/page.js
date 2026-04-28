@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -50,13 +51,13 @@ function MidCta() {
             <p className="text-sm font-semibold leading-7 text-txt-primary">
                 Quer entender o melhor caminho para clarear seus dentes com segurança?
             </p>
-            <Link
+            <WhatsAppTrackedLink
                 href="https://wa.me/553126260038"
                 target="_blank"
                 className="mt-4 inline-flex min-h-11 items-center justify-center rounded-full bg-txt-primary px-5 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-brand-gold"
             >
                 Quero clarear meus dentes
-            </Link>
+            </WhatsAppTrackedLink>
         </div>
     );
 }
@@ -92,13 +93,13 @@ export default function ClareamentoDentalBetimPage() {
                     <p className="mt-5 max-w-3xl text-sm leading-7 text-gray-600 md:text-lg md:leading-8">
                         O escurecimento dos dentes pode acontecer com o tempo por hábitos como café, vinho e cigarro. A avaliação clínica ajuda a escolher a abordagem mais adequada para o seu sorriso.
                     </p>
-                    <Link
+                    <WhatsAppTrackedLink
                         href="https://wa.me/553126260038"
                         target="_blank"
                         className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold"
                     >
                         Quero clarear meus dentes
-                    </Link>
+                    </WhatsAppTrackedLink>
                 </div>
             </section>
 

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -58,9 +59,9 @@ export default function EnxertoOsseoImplanteBetimPage() {
                     <p className="mt-5 max-w-3xl text-sm leading-7 text-gray-600 md:text-lg md:leading-8">
                         Entenda quando o enxerto pode ser necessário antes do implante e como os exames definem o planejamento mais seguro.
                     </p>
-                    <Link href="https://wa.me/553126260038" target="_blank" className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold">
+                    <WhatsAppTrackedLink href="https://wa.me/553126260038" target="_blank" className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold">
                         Quero avaliar meu caso
-                    </Link>
+                    </WhatsAppTrackedLink>
                 </div>
             </section>
 
@@ -99,9 +100,9 @@ export default function EnxertoOsseoImplanteBetimPage() {
                         <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base md:leading-8">
                             Pode alterar o planejamento e o investimento, mas isso só pode ser confirmado após avaliação.
                         </p>
-                        <Link href="https://wa.me/553126260038" target="_blank" className="mt-5 inline-flex min-h-11 items-center justify-center rounded-full bg-brand-gold px-5 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-brand-gold-dark">
+                        <WhatsAppTrackedLink href="https://wa.me/553126260038" target="_blank" className="mt-5 inline-flex min-h-11 items-center justify-center rounded-full bg-brand-gold px-5 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-brand-gold-dark">
                             Quero avaliar meu caso
-                        </Link>
+                        </WhatsAppTrackedLink>
                     </article>
                     <article className="rounded-[24px] border border-black/8 bg-[#fbfaf8] p-6 md:p-8">
                         <h2 className="text-2xl font-black leading-tight md:text-3xl">FAQ</h2>

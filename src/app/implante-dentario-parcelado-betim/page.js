@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -58,9 +59,9 @@ export default function ImplanteParceladoBetimPage() {
                     <p className="mt-5 max-w-3xl text-sm leading-7 text-gray-600 md:text-lg md:leading-8">
                         O investimento é uma preocupação comum. O parcelamento pode ajudar a iniciar o tratamento com mais organização e clareza.
                     </p>
-                    <Link href="https://wa.me/553126260038" target="_blank" className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold">
+                    <WhatsAppTrackedLink href="https://wa.me/553126260038" target="_blank" className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold">
                         Quero entender minhas opções
-                    </Link>
+                    </WhatsAppTrackedLink>
                 </div>
             </section>
 
@@ -93,9 +94,9 @@ export default function ImplanteParceladoBetimPage() {
                         <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base md:leading-8">
                             A avaliação evita promessa rasa e permite entender o caminho mais adequado para segurança clínica e previsibilidade financeira.
                         </p>
-                        <Link href="https://wa.me/553126260038" target="_blank" className="mt-5 inline-flex min-h-11 items-center justify-center rounded-full bg-brand-gold px-5 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-brand-gold-dark">
+                        <WhatsAppTrackedLink href="https://wa.me/553126260038" target="_blank" className="mt-5 inline-flex min-h-11 items-center justify-center rounded-full bg-brand-gold px-5 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-brand-gold-dark">
                             Quero entender minhas opções
-                        </Link>
+                        </WhatsAppTrackedLink>
                     </article>
                     <article className="rounded-[24px] border border-black/8 bg-[#fbfaf8] p-6 md:p-8">
                         <h2 className="text-2xl font-black leading-tight md:text-3xl">FAQ</h2>

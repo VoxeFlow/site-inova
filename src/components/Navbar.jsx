@@ -48,6 +48,10 @@ export default function Navbar() {
 
                 <Link
                     href="https://wa.me/553126260038"
+                onClick={(e) => {
+                    e.preventDefault();
+                    return gtag_report_conversion('https://wa.me/553126260038');
+                }}
                     className="hidden xl:flex border-2 border-brand-gold text-brand-gold font-bold px-6 py-2.5 rounded-full text-xs hover:bg-brand-gold hover:text-white transition items-center gap-2"
                 >
                     <Phone className="w-4 h-4" /> WHATSAPP
@@ -103,7 +107,12 @@ export default function Navbar() {
                         </div>
 
                         <div className="mt-auto grid gap-3 pt-8">
-                            <Link href="https://wa.me/553126260038" onClick={() => setMobileMenuOpen(false)} className="flex min-h-14 items-center justify-center rounded-full border border-black/8 bg-[#111111] px-8 text-sm font-black uppercase tracking-[0.18em] text-white">
+                            <Link href="https://wa.me/553126260038"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setMobileMenuOpen(false);
+                                    return gtag_report_conversion('https://wa.me/553126260038');
+                                }} className="flex min-h-14 items-center justify-center rounded-full border border-black/8 bg-[#111111] px-8 text-sm font-black uppercase tracking-[0.18em] text-white">
                                 Falar no WhatsApp
                             </Link>
                         </div>

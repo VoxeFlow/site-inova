@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -92,13 +93,13 @@ export const metadata = buildMetadata({
 
 function PrimaryCta({ label = 'Quero avaliar meu caso Invisalign', className = '' }) {
     return (
-        <Link
+        <WhatsAppTrackedLink
             href={WHATSAPP_URL}
             target="_blank"
             className={`inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold ${className}`}
         >
             {label}
-        </Link>
+        </WhatsAppTrackedLink>
     );
 }
 

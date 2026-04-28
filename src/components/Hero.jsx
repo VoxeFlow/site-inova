@@ -85,6 +85,10 @@ export default function Hero() {
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 href="https://wa.me/553126260038"
+                onClick={(e) => {
+                    e.preventDefault();
+                    return gtag_report_conversion('https://wa.me/553126260038');
+                }}
                                 className="flex min-h-13 w-full items-center justify-center gap-2 rounded-full bg-txt-primary px-6 py-3.5 text-center text-xs font-black uppercase tracking-[0.14em] text-white shadow-xl transition-colors hover:bg-brand-gold sm:w-auto"
                             >
                                 Quero avaliar meu caso

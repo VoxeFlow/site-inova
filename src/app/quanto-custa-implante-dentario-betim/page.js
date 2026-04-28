@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -64,13 +65,13 @@ function MidCta() {
             <p className="text-sm font-semibold leading-7 text-txt-primary">
                 Quer saber seu valor com mais clareza e sem promessa rasa?
             </p>
-            <Link
+            <WhatsAppTrackedLink
                 href="https://wa.me/553126260038"
                 target="_blank"
                 className="mt-4 inline-flex min-h-11 items-center justify-center rounded-full bg-txt-primary px-5 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-brand-gold"
             >
                 Quero saber meu valor pelo WhatsApp
-            </Link>
+            </WhatsAppTrackedLink>
         </div>
     );
 }
@@ -106,13 +107,13 @@ export default function QuantoCustaImplanteBetimPage() {
                     <p className="mt-5 max-w-3xl text-sm leading-7 text-gray-600 md:text-lg md:leading-8">
                         É normal pesquisar preço antes de procurar atendimento. O valor final, porém, depende da avaliação clínica e do planejamento indicado.
                     </p>
-                    <Link
+                    <WhatsAppTrackedLink
                         href="https://wa.me/553126260038"
                         target="_blank"
                         className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold"
                     >
                         Quero saber meu valor pelo WhatsApp
-                    </Link>
+                    </WhatsAppTrackedLink>
                 </div>
             </section>
 
@@ -185,13 +186,13 @@ export default function QuantoCustaImplanteBetimPage() {
                     <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-gray-600 md:text-base md:leading-8">
                         Fale com a Clínica Inova pelo WhatsApp e receba orientação inicial sobre o seu caso.
                     </p>
-                    <Link
+                    <WhatsAppTrackedLink
                         href="https://wa.me/553126260038"
                         target="_blank"
                         className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold"
                     >
                         Quero saber meu valor pelo WhatsApp
-                    </Link>
+                    </WhatsAppTrackedLink>
                 </div>
             </section>
 

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -78,13 +79,13 @@ function MidCta({ label = 'Quero alinhar meu sorriso' }) {
             <p className="text-sm leading-7 text-txt-primary md:text-base">
                 Quanto antes você entende seu caso, mais simples fica decidir o próximo passo com segurança.
             </p>
-            <Link
+            <WhatsAppTrackedLink
                 href={WHATSAPP_URL}
                 target="_blank"
                 className="mt-4 inline-flex min-h-11 items-center justify-center rounded-full bg-txt-primary px-5 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-brand-gold"
             >
                 {label}
-            </Link>
+            </WhatsAppTrackedLink>
         </div>
     );
 }
@@ -124,13 +125,13 @@ export default function AlinhadoresInvisiveisBetimPage() {
                             Se você evita o aparelho metálico por estética ou rotina, os alinhadores invisíveis podem ser o caminho para alinhar os dentes com conforto e previsibilidade.
                         </p>
                         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                            <Link
+                            <WhatsAppTrackedLink
                                 href={WHATSAPP_URL}
                                 target="_blank"
                                 className="inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold"
                             >
                                 Quero alinhar meu sorriso
-                            </Link>
+                            </WhatsAppTrackedLink>
                             <Link
                                 href="/invisalign-betim"
                                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-txt-primary transition hover:bg-txt-primary hover:text-white"
@@ -226,13 +227,13 @@ export default function AlinhadoresInvisiveisBetimPage() {
                                 <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base md:leading-8">
                                     Aqui o foco é entender seu caso com calma, explicar opções reais e te dar segurança para decidir o melhor caminho para o seu sorriso.
                                 </p>
-                                <Link
+                                <WhatsAppTrackedLink
                                     href={WHATSAPP_URL}
                                     target="_blank"
                                     className="mt-5 inline-flex min-h-11 items-center justify-center rounded-full bg-brand-gold px-5 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-brand-gold-dark"
                                 >
                                     Falar com a clínica agora
-                                </Link>
+                                </WhatsAppTrackedLink>
                             </div>
                         </div>
                     </article>

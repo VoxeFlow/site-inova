@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -69,13 +70,13 @@ function MidCta({ label = 'Quero avaliar meu caso' }) {
             <p className="text-sm font-semibold leading-7 text-txt-primary">
                 Fale com a Clínica Inova no WhatsApp e receba uma orientação inicial clara.
             </p>
-            <Link
+            <WhatsAppTrackedLink
                 href="https://wa.me/553126260038"
                 target="_blank"
                 className="mt-4 inline-flex min-h-11 items-center justify-center rounded-full bg-txt-primary px-5 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-brand-gold"
             >
                 {label}
-            </Link>
+            </WhatsAppTrackedLink>
         </div>
     );
 }
@@ -112,13 +113,13 @@ export default function ImplanteDentarioBetimPage() {
                         Recupere função, estética e confiança com planejamento individual e acompanhamento profissional.
                     </p>
                     <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                        <Link
+                        <WhatsAppTrackedLink
                             href="https://wa.me/553126260038"
                             target="_blank"
                             className="inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold"
                         >
                             Quero avaliar meu caso
-                        </Link>
+                        </WhatsAppTrackedLink>
                         <Link
                             href="/quanto-custa-implante-dentario-betim"
                             className="inline-flex min-h-12 items-center justify-center rounded-full border border-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-txt-primary transition hover:bg-txt-primary hover:text-white"
@@ -155,13 +156,13 @@ export default function ImplanteDentarioBetimPage() {
                             <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base md:leading-8">
                                 O valor depende da quantidade de dentes, condição óssea, exames e planejamento. Em alguns casos, o tratamento pode começar com parcelas a partir de R$150/mês, mediante avaliação clínica.
                             </p>
-                            <Link
+                            <WhatsAppTrackedLink
                                 href="https://wa.me/553126260038"
                                 target="_blank"
                                 className="mt-5 inline-flex min-h-11 items-center justify-center rounded-full bg-brand-gold px-5 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-brand-gold-dark"
                             >
                                 Quero saber meu valor
-                            </Link>
+                            </WhatsAppTrackedLink>
                         </article>
                     </div>
 
@@ -239,13 +240,13 @@ export default function ImplanteDentarioBetimPage() {
                     <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-gray-600 md:text-base md:leading-8">
                         Fale com a Clínica Inova pelo WhatsApp e receba uma orientação inicial sobre o seu caso.
                     </p>
-                    <Link
+                    <WhatsAppTrackedLink
                         href="https://wa.me/553126260038"
                         target="_blank"
                         className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold"
                     >
                         Falar com a clínica agora
-                    </Link>
+                    </WhatsAppTrackedLink>
                 </div>
             </section>
 

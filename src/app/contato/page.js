@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 import { Clock3, MapPin, Phone, MessageCircle } from 'lucide-react';
 
 import Navbar from '@/components/Navbar';
@@ -84,13 +85,13 @@ export default function ContatoPage() {
                             </div>
                         </div>
                         <div className="mt-8 flex flex-wrap gap-3">
-                            <Link
+                            <WhatsAppTrackedLink
                                 href={CLINIC_INFO.whatsapp}
                                 target="_blank"
                                 className="rounded-full bg-brand-gold px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:bg-brand-gold-dark"
                             >
                                 Falar no WhatsApp
-                            </Link>
+                            </WhatsAppTrackedLink>
                             <Link
                                 href={CLINIC_INFO.phoneHref}
                                 className="rounded-full border border-white/14 px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-white/84 transition hover:bg-white/[0.06]"

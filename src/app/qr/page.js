@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 import { buildMetadata, CLINIC_INFO } from '@/lib/seo';
 
 export const metadata = {
@@ -56,8 +57,22 @@ export default function QrPage() {
                             'block rounded-[1.4rem] border border-white/10 bg-white/[0.04] px-5 py-4 text-sm font-medium leading-6 text-white/88 transition hover:bg-white/[0.08]';
 
                         if (item.external) {
+                            if (item.href.includes('wa.me') || item.href.includes('api.whatsapp.com')) {
+                                return (
+                                    <WhatsAppTrackedLink key={item.label} href={item.href} target="_blank" rel="noreferrer" className={className}>
+                                        {item.label}
+                                    </WhatsAppTrackedLink>
+                                );
+                            }
+
                             return (
-                                <a key={item.label} href={item.href} target="_blank" rel="noreferrer" className={className}>
+                                <a
+                                    key={item.label}
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={className}
+                                >
                                     {item.label}
                                 </a>
                             );

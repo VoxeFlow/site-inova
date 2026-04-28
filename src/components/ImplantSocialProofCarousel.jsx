@@ -169,6 +169,10 @@ export default function ImplantSocialProofCarousel({ stories }) {
                 <div className="mt-6 text-center">
                     <Link
                         href="https://wa.me/553126260038"
+                onClick={(e) => {
+                    e.preventDefault();
+                    return gtag_report_conversion('https://wa.me/553126260038');
+                }}
                         target="_blank"
                         className="inline-flex min-h-11 items-center justify-center rounded-full border border-brand-gold/35 bg-brand-gold/10 px-5 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-brand-gold hover:text-white"
                     >

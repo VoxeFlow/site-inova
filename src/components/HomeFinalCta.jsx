@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 
 export default function HomeFinalCta() {
     return (
@@ -11,12 +12,12 @@ export default function HomeFinalCta() {
                 <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-white/70 md:text-base md:leading-8">
                     Fale com a Clínica Inova e receba uma orientação inicial pelo WhatsApp.
                 </p>
-                <a
+                <WhatsAppTrackedLink
                     href="https://wa.me/553126260038"
                     className="mt-7 inline-flex min-h-12 items-center justify-center rounded-full bg-brand-gold px-7 text-center text-sm font-bold text-white transition hover:bg-brand-gold-dark"
                 >
                     Falar com a clínica agora
-                </a>
+                </WhatsAppTrackedLink>
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.12em]">
                     <Link href="/implante-dentario-betim" className="rounded-full border border-white/18 bg-white/[0.04] px-4 py-2 text-white/85 transition hover:bg-white/[0.1]">
                         Implante

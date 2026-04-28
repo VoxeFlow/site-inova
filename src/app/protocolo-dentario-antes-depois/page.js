@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -99,13 +100,13 @@ export default function ProtocoloAntesDepoisPage() {
                         <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base md:leading-8">
                             Resultados visuais são importantes, mas a decisão deve considerar mastigação, estabilidade, planejamento e acompanhamento. A avaliação define o que é possível para o seu caso.
                         </p>
-                        <Link
+                        <WhatsAppTrackedLink
                             href="https://wa.me/553126260038"
                             target="_blank"
                             className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold"
                         >
                             Quero entender meu caso
-                        </Link>
+                        </WhatsAppTrackedLink>
                         <div className="mt-5 flex flex-wrap gap-2">
                             <Link href="/implante-dentario-betim" className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-gray-700">
                                 Implante dentário
@@ -129,13 +130,13 @@ export default function ProtocoloAntesDepoisPage() {
                     <p className="mt-5 text-sm leading-7 text-white/70 md:text-base md:leading-8">
                         Fale com a Clínica Inova e receba orientação inicial sobre possibilidades reais para o seu caso.
                     </p>
-                    <Link
+                    <WhatsAppTrackedLink
                         href="https://wa.me/553126260038"
                         target="_blank"
                         className="mt-7 inline-flex min-h-12 items-center justify-center rounded-full bg-brand-gold px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold-dark"
                     >
                         Quero entender meu caso
-                    </Link>
+                    </WhatsAppTrackedLink>
                 </div>
             </section>
 

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 import { ArrowRight, CheckCircle2, MapPin, Phone } from 'lucide-react';
 
 import Navbar from '@/components/Navbar';
@@ -72,13 +73,13 @@ export default function SeoPageLayout({
                         <h1 className="mt-6 max-w-5xl text-[2.1rem] font-black leading-[0.98] md:text-6xl">{title}</h1>
                         <p className="mt-6 max-w-4xl text-base leading-8 text-gray-600 md:mt-8 md:text-xl md:leading-9">{description}</p>
                         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4 md:mt-10">
-                            <Link
+                            <WhatsAppTrackedLink
                                 href={CLINIC_INFO.whatsapp}
                                 target="_blank"
                                 className="inline-flex items-center justify-center gap-3 rounded-full bg-txt-primary px-8 py-4 text-center text-[11px] font-black uppercase tracking-[0.18em] text-white transition hover:bg-brand-gold md:text-sm"
                             >
                                 Falar com a clínica <ArrowRight className="w-4 h-4" />
-                            </Link>
+                            </WhatsAppTrackedLink>
                             <Link
                                 href="/inicio#agendamento"
                                 className="inline-flex items-center justify-center gap-3 rounded-full border border-txt-primary px-8 py-4 text-center text-[11px] font-black uppercase tracking-[0.18em] text-txt-primary transition hover:bg-txt-primary hover:text-white md:text-sm"

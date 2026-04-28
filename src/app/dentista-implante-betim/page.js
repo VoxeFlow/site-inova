@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -58,9 +59,9 @@ export default function DentistaImplanteBetimPage() {
                     <p className="mt-5 max-w-3xl text-sm leading-7 text-gray-600 md:text-lg md:leading-8">
                         Escolher um dentista para implante é decidir com base em planejamento, exames e acompanhamento, não apenas em promessa de preço.
                     </p>
-                    <Link href="https://wa.me/553126260038" target="_blank" className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold">
+                    <WhatsAppTrackedLink href="https://wa.me/553126260038" target="_blank" className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-txt-primary px-7 text-xs font-black uppercase tracking-[0.15em] text-white transition hover:bg-brand-gold">
                         Agendar avaliação no WhatsApp
-                    </Link>
+                    </WhatsAppTrackedLink>
                 </div>
             </section>
 
@@ -98,9 +99,9 @@ export default function DentistaImplanteBetimPage() {
                         <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base md:leading-8">
                             Antes de decidir, o paciente precisa entender possibilidades, limitações e etapas reais. Orientação correta reduz ansiedade e melhora a decisão.
                         </p>
-                        <Link href="https://wa.me/553126260038" target="_blank" className="mt-5 inline-flex min-h-11 items-center justify-center rounded-full bg-brand-gold px-5 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-brand-gold-dark">
+                        <WhatsAppTrackedLink href="https://wa.me/553126260038" target="_blank" className="mt-5 inline-flex min-h-11 items-center justify-center rounded-full bg-brand-gold px-5 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-brand-gold-dark">
                             Agendar avaliação no WhatsApp
-                        </Link>
+                        </WhatsAppTrackedLink>
                     </article>
                     <article className="rounded-[24px] border border-black/8 bg-[#fbfaf8] p-6 md:p-8">
                         <h2 className="text-2xl font-black leading-tight md:text-3xl">FAQ</h2>

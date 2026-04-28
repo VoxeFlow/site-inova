@@ -133,7 +133,15 @@ export default function ChatWidget() {
                                 if (msg.type === 'link') {
                                     return (
                                         <div key={idx} className="flex justify-center my-4">
-                                            <a href={msg.content} target="_blank" className="bg-[#25D366] text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-green-600 transition flex items-center gap-2">
+                                            <a
+                                                href={msg.content}
+                                                target="_blank"
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    return gtag_report_conversion(msg.content);
+                                                }}
+                                                className="bg-[#25D366] text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-green-600 transition flex items-center gap-2"
+                                            >
                                                 <MessageSquare size={18} /> CHAMAR NO WHATSAPP
                                             </a>
                                         </div>
