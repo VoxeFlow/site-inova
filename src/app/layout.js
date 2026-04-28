@@ -17,6 +17,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br" className="scroll-smooth">
       <body className={montserrat.className}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-1015802303"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = window.gtag || gtag;
+            gtag('js', new Date());
+            gtag('config', 'AW-1015802303');
+          `}
+        </Script>
         <Script id="google-ads-whatsapp-conversion" strategy="afterInteractive">
           {`function gtag_report_conversion(url) {
   var callback = function () {
