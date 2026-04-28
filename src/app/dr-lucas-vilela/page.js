@@ -17,6 +17,15 @@ import {
 
 const WHATSAPP_URL = 'https://wa.me/553126260038';
 
+const credentials = [
+    'Graduado em Odontologia - PUC Minas',
+    'Especialista em Implantodontia - Faculdade Ciências Médicas',
+    'Mestrado em Implantodontia - ILAPEO-PR',
+    'Professor de Graduação - Faculdade Anhanguera',
+    'Professor de Especialização em Implantodontia - Faculdade Ciências Médicas',
+    'Professor de Aperfeiçoamento em Cirurgia Oral - Faculdade Ciências Médicas',
+];
+
 const faqItems = [
     {
         q: 'Quando procurar um dentista especialista em implante?',
@@ -27,20 +36,13 @@ const faqItems = [
         a: 'Não. Cada caso muda conforme condição óssea, exames, número de dentes e estratégia de reabilitação.',
     },
     {
-        q: 'Preciso de avaliação antes de decidir o tratamento?',
-        a: 'Sim. A avaliação evita expectativa incorreta e define o caminho mais seguro para o seu caso.',
+        q: 'Preciso de avaliação antes de decidir?',
+        a: 'Sim. A avaliação clínica evita promessa genérica e define um plano seguro para o seu caso.',
     },
     {
         q: 'O Dr. Lucas atende casos complexos?',
-        a: 'Sim. A atuação clínica envolve casos simples e complexos, sempre com diagnóstico individual e planejamento cuidadoso.',
+        a: 'Sim. A atuação clínica envolve cirurgia de implante em casos simples e complexos, sempre com diagnóstico individual.',
     },
-];
-
-const authorityItems = [
-    'Professor de implante na Ciências Médicas (BH)',
-    'Atuação clínica focada em cirurgia e reabilitação',
-    'Experiência com casos simples e complexos',
-    'Atualização profissional constante',
 ];
 
 export const metadata = buildMetadata({
@@ -95,16 +97,16 @@ export default function DrLucasVilelaPage() {
 
             <Navbar />
 
-            <section className="bg-[radial-gradient(circle_at_top_left,rgba(197,164,126,0.18),transparent_45%),linear-gradient(180deg,#f8f6f2,white)] pb-16 pt-28 md:pb-22 md:pt-36">
+            <section className="bg-[radial-gradient(circle_at_top_left,rgba(197,164,126,0.2),transparent_42%),linear-gradient(180deg,#f8f6f2,#fff)] pb-16 pt-28 md:pb-24 md:pt-36">
                 <div className="mx-auto grid max-w-6xl gap-8 px-5 md:grid-cols-[1fr_0.95fr] md:items-center md:px-6">
                     <div>
-                        <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Implante dentário em Betim</p>
-                        <h1 className="mt-5 max-w-3xl text-4xl font-black leading-tight md:text-6xl">Dr. Lucas Vilela</h1>
+                        <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Especialista em implante dentário em Betim</p>
+                        <h1 className="mt-5 text-4xl font-black leading-[1.02] md:text-6xl">Dr. Lucas Vilela</h1>
                         <p className="mt-5 max-w-3xl text-sm leading-7 text-gray-700 md:text-lg md:leading-8">
                             Cirurgião especialista em implantes dentários, com atuação clínica e acadêmica.
                         </p>
-                        <p className="mt-4 inline-flex rounded-full border border-brand-gold/30 bg-[#f6f1e8] px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-brand-gold md:text-sm">
-                            Professor de implante na Ciências Médicas - Belo Horizonte
+                        <p className="mt-4 max-w-3xl text-sm leading-7 text-gray-700 md:text-base md:leading-8">
+                            Professor de implante na Ciências Médicas - Belo Horizonte.
                         </p>
 
                         <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -118,16 +120,19 @@ export default function DrLucasVilelaPage() {
                         </div>
                     </div>
 
-                    <div className="rounded-[30px] border border-black/8 bg-white p-3 shadow-[0_22px_70px_rgba(0,0,0,0.08)]">
+                    <div className="rounded-[30px] border border-black/8 bg-white p-3 shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
                         <div className="relative h-72 overflow-hidden rounded-[22px] md:h-[33rem]">
                             <Image
                                 src="/assets/Dr Lucas Vilela.jpeg"
-                                alt="Dr. Lucas Vilela, especialista em implante dentário em Betim"
+                                alt="Dr. Lucas Vilela - dentista especialista em implante"
                                 fill
                                 priority
                                 sizes="(max-width: 768px) 100vw, 45vw"
                                 className="object-cover object-top"
                             />
+                            <div className="absolute bottom-3 left-3 rounded-full border border-white/30 bg-black/55 px-3 py-2 text-[10px] font-black uppercase tracking-[0.16em] text-white backdrop-blur">
+                                Cirurgia e reabilitação
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,16 +140,17 @@ export default function DrLucasVilelaPage() {
 
             <section className="bg-white py-14 md:py-18">
                 <div className="mx-auto max-w-6xl px-5 md:px-6">
-                    <article className="rounded-[26px] border border-black/8 bg-[#fbfaf8] p-6 md:p-9">
-                        <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Story</p>
+                    <article className="rounded-[28px] border border-black/8 bg-[#fbfaf8] p-6 md:p-10">
+                        <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Trajetória</p>
                         <h2 className="mt-4 text-3xl font-black leading-tight md:text-4xl">Uma trajetória construída com precisão e responsabilidade</h2>
                         <p className="mt-5 text-sm leading-7 text-gray-700 md:text-base md:leading-8">
-                            A odontologia começou, para o Dr. Lucas Vilela, como uma escolha por cuidado técnico e impacto real na vida das pessoas.
-                            Com o tempo, a área de implante se tornou um caminho natural: uma especialidade que exige planejamento, decisão clínica madura e responsabilidade com cada detalhe.
+                            O início na odontologia veio do desejo de unir técnica e impacto real na vida das pessoas. Com a vivência clínica,
+                            a implantodontia se tornou um caminho natural: uma área que exige leitura cuidadosa de cada caso, planejamento consistente
+                            e compromisso com resultado funcional.
                         </p>
                         <p className="mt-4 text-sm leading-7 text-gray-700 md:text-base md:leading-8">
-                            A evolução profissional veio junto da prática diária, da docência e do contato com casos de diferentes complexidades.
-                            Hoje, o foco é conduzir cada paciente com clareza desde o diagnóstico, sem pressa e sem promessas genéricas.
+                            A evolução profissional aconteceu entre consultório e sala de aula. Hoje, a missão é a mesma: conduzir cada paciente
+                            com clareza, segurança e responsabilidade, do diagnóstico à finalização.
                         </p>
                     </article>
                 </div>
@@ -152,10 +158,10 @@ export default function DrLucasVilelaPage() {
 
             <section className="bg-[#f7f4ef] py-14 md:py-18">
                 <div className="mx-auto max-w-6xl px-5 md:px-6">
-                    <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Autoridade</p>
+                    <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Autoridade acadêmica e clínica</p>
                     <h2 className="mt-4 text-3xl font-black leading-tight md:text-4xl">Formação e atuação</h2>
                     <div className="mt-6 grid gap-4 md:grid-cols-2">
-                        {authorityItems.map((item) => (
+                        {credentials.map((item) => (
                             <article key={item} className="rounded-2xl border border-black/8 bg-white p-5 text-sm font-semibold leading-7 text-gray-700 md:text-base">
                                 {item}
                             </article>
@@ -166,33 +172,46 @@ export default function DrLucasVilelaPage() {
 
             <section id="como-funciona" className="bg-white py-14 md:py-18">
                 <div className="mx-auto max-w-6xl px-5 md:px-6">
-                    <article className="rounded-[26px] border border-black/8 bg-[#fbfaf8] p-6 md:p-9">
+                    <article className="rounded-[28px] border border-black/8 bg-[#fbfaf8] p-6 md:p-10">
                         <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Filosofia de tratamento</p>
                         <h2 className="mt-4 text-3xl font-black leading-tight md:text-4xl">Como o tratamento é conduzido</h2>
                         <p className="mt-5 text-sm leading-7 text-gray-700 md:text-base md:leading-8">
-                            Cada caso começa por um diagnóstico completo. Antes de qualquer decisão, o paciente entende o que é possível,
-                            quais etapas fazem sentido e onde está o melhor equilíbrio entre segurança, função e resultado.
+                            O processo começa por diagnóstico e planejamento individual. Antes de falar em procedimento, o paciente entende
+                            cenário clínico, possibilidades e próximos passos.
                         </p>
                         <p className="mt-4 text-sm leading-7 text-gray-700 md:text-base md:leading-8">
-                            O objetivo é simples: planejamento individual, comunicação clara e uma cirurgia de implante conduzida com responsabilidade,
-                            para que o paciente se sinta seguro durante todo o processo.
+                            Em cirurgia de implante, segurança vem de preparo e execução técnica, mas também de comunicação clara.
+                            O paciente precisa saber exatamente o que será feito e por quê.
                         </p>
                     </article>
                 </div>
             </section>
 
+            <section className="bg-[#111111] py-14 text-white md:py-18">
+                <div className="mx-auto max-w-6xl px-5 md:px-6">
+                    <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Manifesto</p>
+                    <h2 className="mt-4 max-w-4xl text-3xl font-black leading-tight md:text-5xl">
+                        Porque é melhor fazer algo muito bem feito.
+                    </h2>
+                    <p className="mt-4 max-w-3xl text-sm leading-7 text-white/78 md:text-base md:leading-8">
+                        Não se trata de correr para decidir. Trata-se de tratar com critério, respeitando cada detalhe clínico e cada pessoa.
+                    </p>
+                    <p className="mt-5 italic text-white/60">“Cada sonho que você deixa pra trás é um pedaço do futuro que deixa de existir.”</p>
+                </div>
+            </section>
+
             {featuredPatient ? (
-                <section className="bg-[#111111] py-14 text-white md:py-18">
+                <section className="bg-white py-14 md:py-18">
                     <div className="mx-auto max-w-6xl px-5 md:px-6">
                         <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Prova social</p>
-                        <h2 className="mt-4 text-3xl font-black leading-tight md:text-4xl">Histórias reais da clínica</h2>
-                        <p className="mt-4 max-w-3xl text-sm leading-7 text-white/75 md:text-base md:leading-8">
-                            Cada paciente chega com uma história diferente. O cuidado começa antes de qualquer procedimento.
+                        <h2 className="mt-4 text-3xl font-black leading-tight md:text-4xl">Cada paciente chega com uma história diferente</h2>
+                        <p className="mt-4 max-w-3xl text-sm leading-7 text-gray-700 md:text-base md:leading-8">
+                            O cuidado começa antes de qualquer procedimento. Começa na escuta, no diagnóstico e na confiança construída ao longo da jornada.
                         </p>
 
-                        <div className="mt-7 grid gap-5 md:grid-cols-[1.1fr_0.9fr]">
-                            <article className="rounded-[24px] border border-white/12 bg-white/[0.04] p-4">
-                                <div className="relative h-72 overflow-hidden rounded-2xl border border-white/10 md:h-[30rem]">
+                        <div className="mt-7 grid gap-5 md:grid-cols-[1.05fr_0.95fr]">
+                            <article className="rounded-[24px] border border-black/8 bg-[#fbfaf8] p-4">
+                                <div className="relative h-72 overflow-hidden rounded-2xl border border-black/8 md:h-[30rem]">
                                     <Image
                                         src={featuredPatient.src}
                                         alt={featuredPatient.alt}
@@ -201,19 +220,19 @@ export default function DrLucasVilelaPage() {
                                         className="object-cover object-top"
                                     />
                                 </div>
-                                <p className="mt-4 text-sm font-black text-white">{featuredPatient.name}</p>
+                                <p className="mt-4 text-sm font-black text-txt-primary">{featuredPatient.name}</p>
                                 <p className="mt-1 text-[10px] font-black uppercase tracking-[0.18em] text-brand-gold">
                                     {featuredPatient.eyebrow || 'Jornada de cuidado'}
                                 </p>
-                                <p className="mt-3 text-sm leading-7 text-white/75">
+                                <p className="mt-3 text-sm leading-7 text-gray-700">
                                     {featuredPatient.story || 'Cada paciente chega com uma história única. O cuidado é sempre individual.'}
                                 </p>
                             </article>
 
                             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-1">
                                 {compactStories.map((item) => (
-                                    <article key={item.filename} className="rounded-2xl border border-white/12 bg-white/[0.04] p-3">
-                                        <div className="relative h-40 overflow-hidden rounded-xl border border-white/10">
+                                    <article key={item.filename} className="rounded-2xl border border-black/8 bg-[#fbfaf8] p-3">
+                                        <div className="relative h-40 overflow-hidden rounded-xl border border-black/8">
                                             <Image
                                                 src={item.src}
                                                 alt={item.alt}
@@ -222,7 +241,7 @@ export default function DrLucasVilelaPage() {
                                                 className="object-cover object-top"
                                             />
                                         </div>
-                                        <p className="mt-3 text-sm font-black text-white">{item.name}</p>
+                                        <p className="mt-3 text-sm font-black text-txt-primary">{item.name}</p>
                                         <p className="mt-1 text-[10px] font-black uppercase tracking-[0.18em] text-brand-gold">
                                             {item.eyebrow || 'Jornada de cuidado'}
                                         </p>
@@ -234,25 +253,29 @@ export default function DrLucasVilelaPage() {
                 </section>
             ) : null}
 
-            <section className="bg-white py-14 md:py-18">
+            <section className="bg-[#f7f4ef] py-14 md:py-18">
                 <div className="mx-auto max-w-6xl px-5 md:px-6">
-                    <article className="rounded-[26px] border border-black/8 bg-[#fbfaf8] p-6 md:p-9">
-                        <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Implante</p>
+                    <article className="rounded-[28px] border border-black/8 bg-white p-6 md:p-10">
+                        <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Implante dentário em Betim</p>
                         <h2 className="mt-4 text-3xl font-black leading-tight md:text-4xl">Para quem busca implante dentário</h2>
                         <p className="mt-5 text-sm leading-7 text-gray-700 md:text-base md:leading-8">
-                            Se você perdeu um ou mais dentes, busca uma solução fixa e quer mais segurança para mastigar e sorrir,
-                            o próximo passo é uma avaliação bem conduzida.
+                            Se você perdeu um ou mais dentes, busca solução fixa e quer mais segurança para mastigar, sorrir e voltar a viver com confiança,
+                            a avaliação é o passo mais importante.
                         </p>
                         <Link
                             href="/implante-dentario-betim"
                             className="mt-5 inline-flex min-h-11 items-center justify-center rounded-full border border-txt-primary px-5 text-xs font-black uppercase tracking-[0.14em] text-txt-primary transition hover:bg-txt-primary hover:text-white"
                         >
-                            Ver página de implante dentário em Betim
+                            Ir para implante dentário em Betim
                         </Link>
                     </article>
+                </div>
+            </section>
 
-                    <article className="mt-5 rounded-[26px] border border-black/8 bg-[#fbfaf8] p-6 md:p-9">
-                        <h2 className="text-2xl font-black leading-tight md:text-3xl">FAQ</h2>
+            <section className="bg-white py-14 md:py-18">
+                <div className="mx-auto max-w-6xl px-5 md:px-6">
+                    <article className="rounded-[28px] border border-black/8 bg-[#fbfaf8] p-6 md:p-10">
+                        <h2 className="text-2xl font-black leading-tight md:text-3xl">Perguntas frequentes</h2>
                         <div className="mt-4 grid gap-3">
                             {faqItems.map((faq) => (
                                 <div key={faq.q} className="rounded-xl border border-black/6 bg-white px-4 py-4">
