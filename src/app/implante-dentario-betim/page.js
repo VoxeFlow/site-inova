@@ -41,6 +41,7 @@ const faqItems = [
 ];
 
 const internalLinks = [
+    { href: '/dr-lucas-vilela', label: 'Dr. Lucas Vilela' },
     { href: '/quanto-custa-implante-dentario-betim', label: 'Quanto custa implante em Betim' },
     { href: '/implante-dentario-parcelado-betim', label: 'Implante dentário parcelado em Betim' },
     { href: '/dentista-implante-betim', label: 'Dentista para implante em Betim' },

@@ -36,6 +36,9 @@ export default function HomeFinalCta() {
                     <Link href="/alinhadores-invisiveis-betim" className="rounded-full border border-white/18 bg-white/[0.04] px-4 py-2 text-white/85 transition hover:bg-white/[0.1]">
                         Alinhadores
                     </Link>
+                    <Link href="/dr-lucas-vilela" className="rounded-full border border-white/18 bg-white/[0.04] px-4 py-2 text-white/85 transition hover:bg-white/[0.1]">
+                        Dr. Lucas Vilela
+                    </Link>
                 </div>
             </div>
         </section>

@@ -37,6 +37,9 @@ export default function Footer() {
                         <Link href="/implante-dentario-betim" className="text-gray-400 hover:text-white transition">
                             Implante dentário em Betim
                         </Link>
+                        <Link href="/dr-lucas-vilela" className="text-gray-400 hover:text-white transition">
+                            Dr. Lucas Vilela
+                        </Link>
                         <Link href="/quanto-custa-implante-dentario-betim" className="text-gray-400 hover:text-white transition">
                             Quanto custa implante em Betim
                         </Link>

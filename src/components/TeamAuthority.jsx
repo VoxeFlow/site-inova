@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function TeamAuthority() {
     return (
@@ -13,6 +14,12 @@ export default function TeamAuthority() {
                         <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base md:leading-8">
                             Aqui, o primeiro passo não é falar de preço. É entender exatamente o seu caso e te mostrar o caminho com clareza.
                         </p>
+                        <Link
+                            href="/dr-lucas-vilela"
+                            className="mt-5 inline-flex min-h-11 items-center justify-center rounded-full border border-txt-primary px-5 text-xs font-black uppercase tracking-[0.14em] text-txt-primary transition hover:bg-txt-primary hover:text-white"
+                        >
+                            Conhecer Dr. Lucas Vilela
+                        </Link>
                     </div>
                     <div className="relative h-56 overflow-hidden rounded-[20px] border border-black/6 md:h-72">
                         <Image
