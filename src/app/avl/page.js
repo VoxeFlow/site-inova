@@ -1,5 +1,3 @@
-cat > src/app/avl/page.js <<'EOF'
-import Image from 'next/image';
 import { buildMetadata } from '@/lib/seo';
 
 const googleReviewUrl = 'https://g.page/r/CQtv0yb1UjFkEBM/review';
@@ -19,23 +17,23 @@ export const metadata = {
 
 export default function AvaliacaoPage() {
     return (
-        <main className="min-h-screen bg-[#fff8ef] px-4 py-4 text-[#222222] sm:px-6">
-            <div className="mx-auto flex min-h-[calc(100vh-2rem)] w-full max-w-md items-center">
-                <section className="w-full rounded-[2rem] border border-[#f5a400]/20 bg-[#fffdf8] px-5 py-6 text-center shadow-[0_20px_60px_rgba(74,47,29,0.12)] sm:px-7">
-                    <Image
-                        src="/assets/pix/logo-inova.png"
-                        alt="Clínica Inova"
-                        width={295}
-                        height={107}
-                        className="mx-auto h-auto w-[175px]"
-                        priority
-                    />
+        <main className="min-h-screen bg-[#fff8ef] px-4 py-5 text-[#222222] sm:px-6">
+            <div className="mx-auto flex min-h-[calc(100vh-2.5rem)] w-full max-w-md items-center">
+                <section className="w-full rounded-[2rem] border border-[#f5a400]/20 bg-[#fffdf8] px-6 py-7 text-center shadow-[0_22px_70px_rgba(74,47,29,0.13)]">
+                    <div>
+                        <p className="text-3xl font-bold tracking-[-0.05em] text-[#4a2f1d]">
+                            Clínica Inova
+                        </p>
+                        <p className="mt-1 text-xs font-semibold uppercase tracking-[0.28em] text-[#f5a400]">
+                            Odontologia
+                        </p>
+                    </div>
 
-                    <div className="mt-5 text-3xl leading-none tracking-[0.18em]" aria-label="Cinco estrelas">
+                    <div className="mt-6 text-[2rem] leading-none tracking-[0.16em]" aria-label="Cinco estrelas">
                         ⭐⭐⭐⭐⭐
                     </div>
 
-                    <h1 className="mt-5 text-[2rem] font-semibold leading-tight tracking-[-0.05em] text-[#4a2f1d]">
+                    <h1 className="mt-6 text-[2rem] font-semibold leading-tight tracking-[-0.05em] text-[#4a2f1d]">
                         Sua experiência merece ser compartilhada
                     </h1>
 
@@ -48,7 +46,7 @@ export default function AvaliacaoPage() {
                         target="_blank"
                         rel="noreferrer"
                         aria-label="Avaliar a Clínica Inova no Google"
-                        className="mt-6 block rounded-[1.35rem] bg-[#f5a400] px-6 py-4 text-center text-base font-bold text-[#4a2f1d] shadow-[0_16px_36px_rgba(245,164,0,0.32)] transition hover:bg-[#ffb52e] focus:outline-none focus:ring-4 focus:ring-[#f5a400]/35"
+                        className="mt-7 block rounded-[1.35rem] bg-[#f5a400] px-6 py-4 text-center text-base font-bold text-[#4a2f1d] shadow-[0_16px_36px_rgba(245,164,0,0.32)] transition hover:bg-[#ffb52e] focus:outline-none focus:ring-4 focus:ring-[#f5a400]/35"
                     >
                         Avaliar no Google
                     </a>
@@ -67,7 +65,7 @@ export default function AvaliacaoPage() {
                         target="_blank"
                         rel="noreferrer"
                         aria-label="Seguir a Clínica Inova no Instagram"
-                        className="mt-4 inline-flex rounded-full border border-[#4a2f1d]/15 bg-white px-5 py-2 text-sm font-semibold text-[#4a2f1d] transition hover:bg-[#fff8ef]"
+                        className="mt-5 inline-flex rounded-full border border-[#4a2f1d]/15 bg-white px-5 py-2 text-sm font-semibold text-[#4a2f1d] transition hover:bg-[#fff8ef]"
                     >
                         Seguir @clinicainova
                     </a>
@@ -76,7 +74,3 @@ export default function AvaliacaoPage() {
         </main>
     );
 }
-EOF
-
-npm run build
-git status --short
