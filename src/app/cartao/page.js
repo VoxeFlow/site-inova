@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Check, Download, Instagram, Link2, MapPin, MessageCircle, Phone, Share2, Smartphone, X } from "lucide-react";
+import { Check, Download, Instagram, Link2, MapPin, MessageCircle, Phone, QrCode, Share2, Smartphone, X } from "lucide-react";
 import styles from "./page.module.css";
 
 const whatsapp = "https://wa.me/553126260038?text=Ol%C3%A1%2C%20Dr.%20Jefferson!%20Vim%20pelo%20seu%20cart%C3%A3o.";
@@ -24,6 +24,7 @@ export default function CardPage() {
   const [installPrompt, setInstallPrompt] = useState(null);
   const [showInstallHelp, setShowInstallHelp] = useState(false);
   const [isIos, setIsIos] = useState(false);
+  const [showQr, setShowQr] = useState(false);
 
   useEffect(() => {
     const ios = /iphone|ipad|ipod/i.test(navigator.userAgent);
@@ -54,6 +55,8 @@ export default function CardPage() {
     window.setTimeout(() => setSaved(false), 2200);
   }
 
+  const qrUrl = typeof window === "undefined" ? "" : `https://api.qrserver.com/v1/create-qr-code/?size=320x320&margin=14&data=${encodeURIComponent(window.location.href)}`;
+
   async function saveToPhone() {
     if (installPrompt) {
       installPrompt.prompt();
@@ -67,7 +70,7 @@ export default function CardPage() {
   return <main className={styles.page}>
     <div className={styles.card}>
       <header className={styles.header}>
-        <div className={styles.wordmark}><span className={styles.symbol}>i</span><span><b>INOVA</b><small>CLÍNICA ODONTOLÓGICA</small></span></div>
+        <div className={styles.wordmark}><Image src="/assets/pix/logo-inova-branca.png" alt="Clínica Inova" width={146} height={56} /></div>
         <button className={styles.shareIcon} onClick={shareCard} aria-label="Compartilhar cartão"><Share2 size={17} /></button>
       </header>
       <section className={styles.identity}>
@@ -82,8 +85,9 @@ export default function CardPage() {
         <a href="https://instagram.com/clinicainova" target="_blank" rel="noreferrer" className={styles.row}><span className={styles.rowIcon}><Instagram size={16} /></span><span><small>CLÍNICA INOVA</small><b>@clinicainova</b></span></a>
         <a href={map} target="_blank" rel="noreferrer" className={styles.row}><span className={styles.rowIcon}><MapPin size={16} /></span><span><small>LOCALIZAÇÃO</small><b>Como chegar à Clínica Inova</b></span></a>
       </div>
-      <footer className={styles.footer}><p>Toque, salve e mantenha meu contato.</p><button onClick={shareCard}>{copied ? <><Check size={14} /> Link copiado</> : <><Link2 size={14} /> Compartilhar cartão</>}</button></footer>
+      <footer className={styles.footer}><p>Toque, salve e mantenha meu contato.</p><div className={styles.footerActions}><button onClick={() => setShowQr(true)}><QrCode size={14} /> Mostrar QR Code</button><button onClick={shareCard}>{copied ? <><Check size={14} /> Link copiado</> : <><Link2 size={14} /> Compartilhar</>}</button></div></footer>
     </div>
+    {showQr && <div className={styles.modalBackdrop} role="dialog" aria-modal="true" aria-label="QR Code do cartão"><div className={styles.modal}><button className={styles.close} onClick={() => setShowQr(false)} aria-label="Fechar"><X size={17} /></button><span className={styles.qrLabel}>CARTÃO DIGITAL</span><h2>Escaneie para abrir</h2><img className={styles.qrImage} src={qrUrl} alt="QR Code para abrir o cartão" /><p>Aponte a câmera do celular para acessar o cartão.</p><button className={styles.modalButton} onClick={() => setShowQr(false)}>Fechar</button></div></div>}
     {showInstallHelp && <div className={styles.modalBackdrop} role="dialog" aria-modal="true" aria-label="Salvar cartão no celular"><div className={styles.modal}><button className={styles.close} onClick={() => setShowInstallHelp(false)} aria-label="Fechar"><X size={17} /></button><Smartphone size={24} className={styles.modalIcon} /><h2>{isIos ? "Salvar no iPhone" : "Salvar no celular"}</h2>{isIos ? <p>Toque em <strong>Compartilhar</strong> no navegador e depois em <strong>Adicionar à Tela de Início</strong>.</p> : <p>Abra o menu do navegador e escolha <strong>Adicionar à tela inicial</strong> ou <strong>Instalar aplicativo</strong>.</p>}<button className={styles.modalButton} onClick={() => setShowInstallHelp(false)}>Entendi</button></div></div>}
   </main>;
 }
