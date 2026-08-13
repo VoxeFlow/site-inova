@@ -70,7 +70,7 @@ export default function CardPage() {
   return <main className={styles.page}>
     <div className={styles.card}>
       <header className={styles.header}>
-        <div className={styles.wordmark}><Image src="/assets/pix/logo-inova-branca.png" alt="Clínica Inova" width={146} height={56} /></div>
+        <div className={styles.wordmark}><span className={styles.clinicName}>Clínica <strong>Inova</strong><small>Transformando sorrisos!</small></span></div>
         <button className={styles.shareIcon} onClick={shareCard} aria-label="Compartilhar cartão"><Share2 size={17} /></button>
       </header>
       <section className={styles.identity}>
