@@ -15,7 +15,7 @@ export default function Navbar() {
         inicio: pagePrefix ? `${pagePrefix}#inicio` : '/#inicio',
         tratamentos: pagePrefix ? `${pagePrefix}#tratamentos` : '/#precos',
         processo: pagePrefix ? `${pagePrefix}#processo` : '/#como-funciona',
-        duvidas: pagePrefix ? `${pagePrefix}#contato` : '/#duvidas-rapidas',
+        duvidas: pagePrefix ? `${pagePrefix}#duvidas-rapidas` : '/#duvidas-rapidas',
         contato: pagePrefix ? `${pagePrefix}#contato` : '/contato',
     };
 
