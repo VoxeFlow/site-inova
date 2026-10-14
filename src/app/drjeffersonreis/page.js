@@ -54,9 +54,7 @@ export default function DrJeffersonReisPage() {
 
         <Navbar />
 
-        <section className="relative isolate flex min-h-[760px] items-end overflow-hidden bg-[#f4f0e9] pb-12 pt-32 md:min-h-[860px] md:pb-20 md:pt-40">
-            <div className="absolute -right-40 top-10 -z-10 h-[38rem] w-[38rem] rounded-full border border-brand-gold/20 bg-brand-gold/10 blur-3xl" />
-            <div className="absolute -left-56 bottom-0 -z-10 h-[32rem] w-[32rem] rounded-full bg-white/70 blur-3xl" />
+        <section className="relative isolate flex min-h-[760px] items-end overflow-hidden bg-white pb-12 pt-32 md:min-h-[860px] md:pb-20 md:pt-40">
             <div className="mx-auto grid w-full max-w-7xl gap-10 px-5 md:grid-cols-[0.86fr_1.14fr] md:items-end md:px-10">
                 <div className="relative z-10 pb-4 motion-safe:animate-fade-up">
                     <SectionLabel>Dr. Jefferson Reis · Invisalign Doctor</SectionLabel>
@@ -67,8 +65,8 @@ export default function DrJeffersonReisPage() {
                 </div>
                 <div className="relative motion-safe:animate-fade-up [animation-delay:180ms]">
                     <div className="absolute -left-5 top-12 hidden rounded-full border border-black/10 bg-white/80 px-4 py-3 text-[10px] font-medium uppercase tracking-[0.2em] shadow-lg backdrop-blur md:block">Planejamento<br />individual</div>
-                    <div className="relative ml-auto aspect-[0.84] max-w-[34rem] overflow-hidden rounded-[180px_180px_28px_28px] border-[10px] border-white bg-white shadow-[0_30px_100px_rgba(34,28,20,0.16)] transition duration-700 hover:rounded-[150px_150px_28px_28px] hover:shadow-[0_38px_120px_rgba(34,28,20,0.22)]">
-                        <Image src="/assets/Dr Jeff_edited.avif" alt="Dr. Jefferson Reis - especialista em Ortodontia em Betim" fill priority sizes="(max-width: 768px) 92vw, 42vw" className="object-cover object-top transition duration-700 hover:scale-[1.03]" />
+                    <div className="relative ml-auto aspect-[0.84] max-w-[34rem]">
+                        <Image src="/assets/Dr Jeff_edited.avif" alt="Dr. Jefferson Reis - especialista em Ortodontia em Betim" fill priority sizes="(max-width: 768px) 92vw, 42vw" className="object-cover object-top transition duration-700 hover:scale-[1.02]" />
                     </div>
                     <div className="absolute -bottom-4 right-3 rounded-full bg-white px-5 py-3 text-[10px] font-medium uppercase tracking-[0.18em] text-gray-600 shadow-xl md:right-8">Invisalign · Self · SouSmile</div>
                 </div>
