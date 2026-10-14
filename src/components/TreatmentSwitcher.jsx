@@ -2,40 +2,40 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowUpRight, Check, ScanFace, Sparkles, ShieldCheck } from 'lucide-react';
-import Link from 'next/link';
+import WhatsAppTrackedLink from '@/components/WhatsAppTrackedLink';
 import { useState } from 'react';
 
 const treatments = [
     {
         name: 'Invisalign',
+        mark: 'invisalign',
         eyebrow: 'Alinhadores transparentes',
         description: 'Planejamento digital e acompanhamento profissional para alinhar o sorriso com discrição.',
         points: ['Tecnologia de planejamento digital', 'Conforto para a rotina', 'Indicação definida em avaliação'],
-        href: '/invisalign-betim',
         Icon: ScanFace,
     },
     {
         name: 'Self',
+        mark: 'self',
         eyebrow: 'Outra possibilidade',
         description: 'Uma alternativa de alinhadores transparentes que deve ser considerada conforme o diagnóstico.',
         points: ['Tratamento individualizado', 'Acompanhamento clínico', 'Escolha baseada no caso'],
-        href: '/alinhadores-invisiveis-betim',
         Icon: Sparkles,
     },
     {
         name: 'SouSmile',
+        mark: 'sousmile',
         eyebrow: 'Outra possibilidade',
         description: 'Uma opção de alinhadores transparentes para entrar na conversa quando fizer sentido para o paciente.',
         points: ['Alternativa transparente', 'Planejamento responsável', 'Decisão após avaliação'],
-        href: '/alinhadores-invisiveis-betim',
         Icon: Check,
     },
     {
         name: 'Convencional',
+        mark: 'convencional',
         eyebrow: 'Aparelho fixo',
         description: 'Quando o aparelho convencional é a melhor abordagem, ele também faz parte do plano.',
         points: ['Abordagem comprovada', 'Indicação clínica', 'Acompanhamento próximo'],
-        href: '/dentista-em-betim',
         Icon: ShieldCheck,
     },
 ];
@@ -57,7 +57,7 @@ export default function TreatmentSwitcher() {
                         aria-pressed={active === index}
                     >
                         <span className="text-[10px] font-medium uppercase tracking-[0.22em] opacity-60">0{index + 1}</span>
-                        <span className="mt-2 block text-sm font-normal md:text-base">{item.name}</span>
+                        <span className={`mt-2 block text-sm font-normal md:text-base ${item.mark === 'invisalign' ? 'tracking-[-0.04em]' : ''}`}>{item.name}</span>
                         {active === index ? <motion.span layoutId="active-treatment" className="absolute inset-x-5 bottom-0 h-0.5 bg-brand-gold md:inset-x-6" /> : null}
                     </button>
                 ))}
@@ -70,7 +70,7 @@ export default function TreatmentSwitcher() {
                     </motion.div>
                     <div>
                         <p className="text-xs font-medium uppercase tracking-[0.24em] text-brand-gold">{treatment.eyebrow}</p>
-                        <h3 className="mt-3 text-3xl font-normal">{treatment.name}</h3>
+                        <h3 className={`mt-3 text-3xl font-normal ${treatment.mark === 'invisalign' ? 'tracking-[-0.06em]' : ''}`}>{treatment.name}</h3>
                     </div>
                 </div>
 
@@ -80,7 +80,7 @@ export default function TreatmentSwitcher() {
                         <div className="mt-6 grid gap-3 sm:grid-cols-3">
                             {treatment.points.map((point) => <div key={point} className="rounded-2xl bg-[#faf8f4] px-4 py-4 text-sm font-semibold leading-6 text-gray-700">{point}</div>)}
                         </div>
-                        <Link href={treatment.href} className="mt-7 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.16em] text-txt-primary transition-colors hover:text-brand-gold">Explorar tratamento <ArrowUpRight className="h-4 w-4" /></Link>
+                        <WhatsAppTrackedLink href={`https://wa.me/553126260038?text=${encodeURIComponent(`Olá, gostaria de conversar sobre ${treatment.name} e saber se é indicado para o meu caso.`)}`} target="_blank" className="mt-7 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.16em] text-txt-primary transition-colors hover:text-brand-gold">Conversar sobre esta opção <ArrowUpRight className="h-4 w-4" /></WhatsAppTrackedLink>
                     </motion.div>
                 </AnimatePresence>
             </div>

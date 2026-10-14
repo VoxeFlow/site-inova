@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { Menu, X, Phone } from 'lucide-react';
 import { clsx } from 'clsx';
@@ -8,6 +9,15 @@ import { twMerge } from 'tailwind-merge';
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
+    const pagePrefix = pathname === '/drjeffersonreis' ? '/drjeffersonreis' : '';
+    const navLinks = {
+        inicio: pagePrefix ? `${pagePrefix}#inicio` : '/#inicio',
+        tratamentos: pagePrefix ? `${pagePrefix}#tratamentos` : '/#precos',
+        processo: pagePrefix ? `${pagePrefix}#processo` : '/#como-funciona',
+        duvidas: pagePrefix ? `${pagePrefix}#contato` : '/#duvidas-rapidas',
+        contato: pagePrefix ? `${pagePrefix}#contato` : '/contato',
+    };
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -39,11 +49,11 @@ export default function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className="hidden xl:flex gap-10 text-xs font-bold text-gray-500 uppercase tracking-widest items-center">
-                    <Link href="/#inicio" className="hover:text-brand-gold transition">INÍCIO</Link>
-                    <Link href="/#precos" className="hover:text-brand-gold transition">INVESTIMENTO</Link>
-                    <Link href="/#como-funciona" className="hover:text-brand-gold transition">COMO FUNCIONA</Link>
-                    <Link href="/#duvidas-rapidas" className="hover:text-brand-gold transition">DÚVIDAS</Link>
-                    <Link href="/contato" className="hover:text-brand-gold transition">CONTATO</Link>
+                    <Link href={navLinks.inicio} className="hover:text-brand-gold transition">INÍCIO</Link>
+                    <Link href={navLinks.tratamentos} className="hover:text-brand-gold transition">TRATAMENTOS</Link>
+                    <Link href={navLinks.processo} className="hover:text-brand-gold transition">COMO FUNCIONA</Link>
+                    <Link href={navLinks.duvidas} className="hover:text-brand-gold transition">DÚVIDAS</Link>
+                    <Link href={navLinks.contato} className="hover:text-brand-gold transition">CONTATO</Link>
                 </div>
 
                 <Link
@@ -99,11 +109,11 @@ export default function Navbar() {
                         </div>
 
                         <div className="mt-8 grid gap-3">
-                            <Link href="/#inicio" onClick={() => setMobileMenuOpen(false)} className="rounded-[22px] border border-black/6 bg-white px-5 py-4 text-lg font-bold text-txt-primary shadow-sm">Início</Link>
-                            <Link href="/#precos" onClick={() => setMobileMenuOpen(false)} className="rounded-[22px] border border-black/6 bg-white px-5 py-4 text-lg font-bold text-txt-primary shadow-sm">Investimento</Link>
-                            <Link href="/#como-funciona" onClick={() => setMobileMenuOpen(false)} className="rounded-[22px] border border-black/6 bg-white px-5 py-4 text-lg font-bold text-txt-primary shadow-sm">Como funciona</Link>
-                            <Link href="/#duvidas-rapidas" onClick={() => setMobileMenuOpen(false)} className="rounded-[22px] border border-black/6 bg-white px-5 py-4 text-lg font-bold text-txt-primary shadow-sm">Dúvidas</Link>
-                            <Link href="/contato" onClick={() => setMobileMenuOpen(false)} className="rounded-[22px] border border-black/6 bg-white px-5 py-4 text-lg font-bold text-txt-primary shadow-sm">Contato</Link>
+                            <Link href={navLinks.inicio} onClick={() => setMobileMenuOpen(false)} className="rounded-[22px] border border-black/6 bg-white px-5 py-4 text-lg font-bold text-txt-primary shadow-sm">Início</Link>
+                            <Link href={navLinks.tratamentos} onClick={() => setMobileMenuOpen(false)} className="rounded-[22px] border border-black/6 bg-white px-5 py-4 text-lg font-bold text-txt-primary shadow-sm">Tratamentos</Link>
+                            <Link href={navLinks.processo} onClick={() => setMobileMenuOpen(false)} className="rounded-[22px] border border-black/6 bg-white px-5 py-4 text-lg font-bold text-txt-primary shadow-sm">Como funciona</Link>
+                            <Link href={navLinks.duvidas} onClick={() => setMobileMenuOpen(false)} className="rounded-[22px] border border-black/6 bg-white px-5 py-4 text-lg font-bold text-txt-primary shadow-sm">Dúvidas</Link>
+                            <Link href={navLinks.contato} onClick={() => setMobileMenuOpen(false)} className="rounded-[22px] border border-black/6 bg-white px-5 py-4 text-lg font-bold text-txt-primary shadow-sm">Contato</Link>
                         </div>
 
                         <div className="mt-auto grid gap-3 pt-8">
