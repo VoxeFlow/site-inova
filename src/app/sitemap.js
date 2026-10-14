@@ -7,6 +7,7 @@ const routes = [
     '/sobre',
     '/contato',
     '/dr-lucas-vilela',
+    '/drjeffersonreis',
     '/implante-dentario-betim',
     '/quanto-custa-implante-dentario-betim',
     '/implante-dentario-parcelado-betim',

@@ -25,6 +25,7 @@ export function buildMetadata({
     description,
     path,
     keywords = [],
+    image = CLINIC_INFO.image,
 }) {
     return {
         title,
@@ -40,6 +41,40 @@ export function buildMetadata({
             siteName: CLINIC_INFO.name,
             locale: 'pt_BR',
             type: 'website',
+            images: [{ url: absoluteUrl(image), alt: title }],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+            images: [absoluteUrl(image)],
+        },
+    };
+}
+
+export function buildProfessionalSchema({ name, description, path, image, jobTitle, specialties }) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name,
+        url: absoluteUrl(path),
+        image: absoluteUrl(image),
+        description,
+        jobTitle,
+        knowsAbout: specialties,
+        worksFor: {
+            '@type': 'Dentist',
+            name: CLINIC_INFO.name,
+            url: SITE_URL,
+            telephone: CLINIC_INFO.phone,
+            address: {
+                '@type': 'PostalAddress',
+                streetAddress: CLINIC_INFO.address,
+                addressLocality: CLINIC_INFO.city,
+                addressRegion: CLINIC_INFO.state,
+                postalCode: CLINIC_INFO.zip,
+                addressCountry: 'BR',
+            },
         },
     };
 }
