@@ -57,7 +57,7 @@ export default function TreatmentSwitcher() {
                         aria-pressed={active === index}
                     >
                         <span className="text-[10px] font-medium uppercase tracking-[0.22em] opacity-60">0{index + 1}</span>
-                        <span className="mt-2 block text-sm font-medium md:text-base">{item.name}</span>
+                        <span className="mt-2 block text-sm font-normal md:text-base">{item.name}</span>
                         {active === index ? <motion.span layoutId="active-treatment" className="absolute inset-x-5 bottom-0 h-0.5 bg-brand-gold md:inset-x-6" /> : null}
                     </button>
                 ))}
@@ -70,7 +70,7 @@ export default function TreatmentSwitcher() {
                     </motion.div>
                     <div>
                         <p className="text-xs font-medium uppercase tracking-[0.24em] text-brand-gold">{treatment.eyebrow}</p>
-                        <h3 className="mt-3 text-3xl font-medium">{treatment.name}</h3>
+                        <h3 className="mt-3 text-3xl font-normal">{treatment.name}</h3>
                     </div>
                 </div>
 
