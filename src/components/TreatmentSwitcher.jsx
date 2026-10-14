@@ -53,11 +53,11 @@ export default function TreatmentSwitcher() {
                         key={item.name}
                         type="button"
                         onClick={() => setActive(index)}
-                        className={`group relative px-5 py-5 text-left transition-colors duration-300 md:px-6 ${active === index ? 'bg-[#111111] text-white' : 'bg-white text-gray-500 hover:bg-[#faf8f4] hover:text-txt-primary'}`}
+                        className={`group relative px-5 py-5 text-left transition-colors duration-300 md:px-6 ${active === index ? 'bg-[#f5f5f7] text-txt-primary' : 'bg-white text-gray-500 hover:bg-[#faf8f4] hover:text-txt-primary'}`}
                         aria-pressed={active === index}
                     >
-                        <span className="text-[10px] font-black uppercase tracking-[0.22em] opacity-60">0{index + 1}</span>
-                        <span className="mt-2 block text-sm font-black md:text-base">{item.name}</span>
+                        <span className="text-[10px] font-medium uppercase tracking-[0.22em] opacity-60">0{index + 1}</span>
+                        <span className="mt-2 block text-sm font-medium md:text-base">{item.name}</span>
                         {active === index ? <motion.span layoutId="active-treatment" className="absolute inset-x-5 bottom-0 h-0.5 bg-brand-gold md:inset-x-6" /> : null}
                     </button>
                 ))}
@@ -69,8 +69,8 @@ export default function TreatmentSwitcher() {
                         <Icon className="h-7 w-7" />
                     </motion.div>
                     <div>
-                        <p className="text-xs font-black uppercase tracking-[0.24em] text-brand-gold">{treatment.eyebrow}</p>
-                        <h3 className="mt-3 text-3xl font-black">{treatment.name}</h3>
+                        <p className="text-xs font-medium uppercase tracking-[0.24em] text-brand-gold">{treatment.eyebrow}</p>
+                        <h3 className="mt-3 text-3xl font-medium">{treatment.name}</h3>
                     </div>
                 </div>
 
@@ -80,7 +80,7 @@ export default function TreatmentSwitcher() {
                         <div className="mt-6 grid gap-3 sm:grid-cols-3">
                             {treatment.points.map((point) => <div key={point} className="rounded-2xl bg-[#faf8f4] px-4 py-4 text-sm font-semibold leading-6 text-gray-700">{point}</div>)}
                         </div>
-                        <Link href={treatment.href} className="mt-7 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em] text-txt-primary transition-colors hover:text-brand-gold">Explorar tratamento <ArrowUpRight className="h-4 w-4" /></Link>
+                        <Link href={treatment.href} className="mt-7 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.16em] text-txt-primary transition-colors hover:text-brand-gold">Explorar tratamento <ArrowUpRight className="h-4 w-4" /></Link>
                     </motion.div>
                 </AnimatePresence>
             </div>
