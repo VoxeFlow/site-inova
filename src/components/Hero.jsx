@@ -25,13 +25,13 @@ export default function Hero() {
                     >
                         <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-gold/25 bg-white/90 px-3.5 py-1.5 text-[10px] font-black uppercase tracking-[0.18em] text-brand-gold shadow-sm md:mb-6 md:text-[11px]">
                             <Sparkles className="h-3.5 w-3.5" />
-                            Implante dentário em Betim
+                            Clínica Inova · Betim
                         </div>
 
                         <div className="relative mb-4 overflow-hidden rounded-[28px] bg-[linear-gradient(150deg,rgba(255,255,255,0.95),rgba(244,236,220,0.85))] px-4 pb-3 pt-4 shadow-[0_20px_70px_rgba(0,0,0,0.08)] md:hidden">
                             <div className="relative z-20 max-w-[64%]">
-                                <h1 className="text-[1.9rem] font-black leading-[1.03] text-txt-primary">
-                                    Implante dentário em Betim para voltar a mastigar com segurança
+                                <h1 className="text-[1.9rem] font-normal leading-[1.03] tracking-[-0.04em] text-txt-primary">
+                                    Odontologia para cuidar do sorriso com clareza
                                 </h1>
                                 <p className="mt-2 text-[13px] font-medium leading-5 text-gray-600">
                                     Avaliação clara e planejamento individual.
@@ -57,11 +57,11 @@ export default function Hero() {
                         </div>
 
                         <div className="hidden md:block">
-                            <h1 className="max-w-2xl text-[2.2rem] font-black leading-[1.04] text-txt-primary lg:text-[2.85rem]">
-                                Implante dentário em Betim para voltar a mastigar com segurança
+                            <h1 className="max-w-2xl text-[2.2rem] font-normal leading-[1.04] tracking-[-0.05em] text-txt-primary lg:text-[3.7rem]">
+                                Odontologia para cuidar do sorriso com clareza
                             </h1>
                             <p className="mt-4 max-w-xl text-[16px] font-medium leading-7 text-gray-600 md:text-lg md:leading-relaxed">
-                                Avaliação clara, planejamento individual e orientação direta antes de decidir.
+                                Implantes, alinhadores e estética com planejamento individual, equipe experiente e acompanhamento próximo.
                             </p>
                         </div>
 
@@ -71,13 +71,13 @@ export default function Hero() {
                             transition={{ duration: 0.55, delay: 0.1 }}
                             className="inline-flex items-center rounded-full border border-brand-gold/30 bg-white/95 px-4 py-2.5 shadow-[0_14px_40px_rgba(0,0,0,0.06)]"
                         >
-                            <p className="text-[13px] font-black leading-tight text-txt-primary md:text-[15px]">
-                                Tratamentos a partir de R$150/mês*
+                            <p className="text-[13px] font-medium leading-tight text-txt-primary md:text-[15px]">
+                                Atendimento particular em Betim
                             </p>
                         </motion.div>
 
                         <p className="mt-2 text-[11px] leading-5 text-gray-500 md:text-xs">
-                            *Valor inicial estimado e sujeito à avaliação.
+                            Cada caso começa com uma avaliação.
                         </p>
 
                         <div className="mt-5 flex flex-col gap-3 sm:flex-row md:mt-7">
@@ -97,10 +97,10 @@ export default function Hero() {
                             <motion.a
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                href="#precos"
+                                href="#tratamentos"
                                 className="flex min-h-13 w-full items-center justify-center rounded-full border-2 border-txt-primary px-6 py-3.5 text-center text-xs font-black uppercase tracking-[0.14em] text-txt-primary transition hover:bg-txt-primary hover:text-white sm:w-auto"
                             >
-                                Ver valores e etapas
+                                Conhecer tratamentos
                             </motion.a>
                         </div>
 

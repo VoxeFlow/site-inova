@@ -13,7 +13,7 @@ export default function Navbar() {
     const pagePrefix = pathname === '/drjeffersonreis' ? '/drjeffersonreis' : '';
     const navLinks = {
         inicio: pagePrefix ? `${pagePrefix}#inicio` : '/#inicio',
-        tratamentos: pagePrefix ? `${pagePrefix}#tratamentos` : '/#precos',
+        tratamentos: pagePrefix ? `${pagePrefix}#tratamentos` : '/#tratamentos',
         processo: pagePrefix ? `${pagePrefix}#processo` : '/#como-funciona',
         duvidas: pagePrefix ? `${pagePrefix}#duvidas-rapidas` : '/#duvidas-rapidas',
         contato: pagePrefix ? `${pagePrefix}#contato` : '/contato',

@@ -1,23 +1,23 @@
 const faqs = [
     {
-        question: 'Quanto custa implante?',
+        question: 'Como saber qual tratamento é indicado?',
         answer:
-            'Depende do caso, mas alguns tratamentos podem começar com parcelas a partir de R$150/mês após avaliação clínica.',
+            'A indicação depende da avaliação clínica, dos exames necessários e dos seus objetivos. O plano é definido depois de entender o caso.',
     },
     {
-        question: 'Implante dói?',
+        question: 'Quanto custa um tratamento?',
         answer:
-            'Com anestesia local e planejamento adequado, o procedimento costuma ser mais tranquilo do que muitos imaginam.',
+            'O investimento varia conforme o diagnóstico, a complexidade, o tempo e a modalidade indicada. Por isso, não há uma tabela única para todos.',
     },
     {
-        question: 'Posso fazer mesmo depois de muito tempo?',
+        question: 'Alinhadores funcionam para todos os casos?',
         answer:
-            'Em muitos casos, sim. A avaliação mostra se há necessidade de etapas complementares antes do implante dentário.',
+            'Nem sempre. A avaliação mostra se Invisalign, Self, SouSmile ou aparelho convencional fazem sentido para o seu caso.',
     },
     {
         question: 'Preciso avaliar antes de saber o valor?',
         answer:
-            'Sim. O implante dentário preço depende de exames, condição óssea e planejamento individual.',
+            'Sim. A avaliação organiza as possibilidades e permite explicar etapas, prazo estimado e investimento com mais clareza.',
     },
 ];
 
@@ -27,8 +27,8 @@ export default function ImplantQuickFaq() {
             <div className="mx-auto max-w-6xl px-5 md:px-6">
                 <div className="mx-auto mb-10 max-w-3xl text-center md:mb-12">
                     <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">FAQ</p>
-                    <h2 className="mt-5 text-3xl font-black leading-tight text-txt-primary md:text-4xl">
-                        As dúvidas que mais aparecem antes do implante
+                    <h2 className="mt-5 text-3xl font-normal leading-tight tracking-[-0.03em] text-txt-primary md:text-5xl">
+                        Perguntas importantes antes de começar
                     </h2>
                 </div>
 

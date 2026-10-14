@@ -1,15 +1,15 @@
 const steps = [
     {
         title: '1. Avaliação',
-        copy: 'Entendemos seu caso e suas prioridades.',
+        copy: 'Entendemos o que você busca e suas prioridades.',
     },
     {
-        title: '2. Exames e plano',
-        copy: 'Definimos o caminho mais seguro para você.',
+        title: '2. Análise e plano',
+        copy: 'Definimos as possibilidades e o caminho mais adequado.',
     },
     {
-        title: '3. Tratamento',
-        copy: 'Implante com acompanhamento até a finalização.',
+        title: '3. Acompanhamento',
+        copy: 'Você começa com orientação próxima em cada etapa.',
     },
 ];
 

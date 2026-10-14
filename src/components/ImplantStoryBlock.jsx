@@ -2,15 +2,15 @@ import { SmilePlus, ShieldCheck, BadgeAlert } from 'lucide-react';
 
 const cards = [
     {
-        title: 'Insegurança para mastigar',
+        title: 'Voltar a mastigar com segurança',
         icon: ShieldCheck,
     },
     {
-        title: 'Vergonha ao sorrir',
+        title: 'Alinhar o sorriso com discrição',
         icon: SmilePlus,
     },
     {
-        title: 'Medo de piorar com o tempo',
+        title: 'Entender antes de decidir',
         icon: BadgeAlert,
     },
 ];
@@ -20,12 +20,12 @@ export default function ImplantStoryBlock() {
         <section className="bg-[#f7f4ef] py-14 md:py-20">
             <div className="mx-auto max-w-6xl px-5 md:px-6">
                 <div className="mx-auto max-w-3xl text-center">
-                    <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-gold">Dor e transformação</p>
+                    <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-gold">Cada sorriso tem uma história</p>
                     <h2 className="mt-4 text-3xl font-black leading-tight text-txt-primary md:text-5xl">
-                        Perder um dente muda mais do que o sorriso
+                        O tratamento começa pelo que você quer viver melhor
                     </h2>
                     <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base md:leading-8">
-                        A insegurança para mastigar, o desconforto social e a vergonha ao sorrir pesam na rotina. O implante pode devolver função e confiança com planejamento correto.
+                        Pode ser recuperar a função, sorrir com mais liberdade ou encontrar uma forma discreta de cuidar dos dentes. A Clínica Inova começa entendendo a sua necessidade antes de falar em procedimento.
                     </p>
                 </div>
 
