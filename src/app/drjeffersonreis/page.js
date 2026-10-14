@@ -55,8 +55,8 @@ export default function DrJeffersonReisPage() {
 
         <Navbar />
 
-        <section id="inicio" className="relative isolate flex min-h-[760px] items-end overflow-hidden bg-white pb-12 pt-32 md:min-h-[860px] md:pb-20 md:pt-40">
-            <div className="mx-auto grid w-full max-w-7xl gap-10 px-5 md:grid-cols-[0.86fr_1.14fr] md:items-end md:px-10">
+        <section id="inicio" className="relative isolate flex min-h-0 items-start overflow-hidden bg-white pb-10 pt-28 md:min-h-[860px] md:items-end md:pb-20 md:pt-40">
+            <div className="mx-auto grid w-full max-w-7xl gap-7 px-5 md:grid-cols-[0.86fr_1.14fr] md:items-end md:gap-10 md:px-10">
                 <div className="relative z-10 pb-4 motion-safe:animate-fade-up">
                     <SectionLabel>Dr. Jefferson Reis · Invisalign Doctor</SectionLabel>
                     <h1 className="mt-5 max-w-xl text-[3.25rem] font-normal leading-[0.92] tracking-[-0.06em] md:text-[6.3rem]">Seu sorriso,<br /><span className="text-brand-gold">bem planejado.</span></h1>
@@ -66,7 +66,7 @@ export default function DrJeffersonReisPage() {
                 </div>
                 <div className="relative motion-safe:animate-fade-up [animation-delay:180ms]">
                     <div className="absolute -left-5 top-12 hidden rounded-full border border-black/10 bg-white/80 px-4 py-3 text-[10px] font-medium uppercase tracking-[0.2em] shadow-lg backdrop-blur md:block">Planejamento<br />individual</div>
-                    <div className="relative ml-auto aspect-[0.84] max-w-[34rem]">
+                    <div className="relative mx-auto aspect-[0.84] w-full max-w-[22rem] md:ml-auto md:max-w-[34rem]">
                         <Image src="/assets/Dr Jeff_edited.avif" alt="Dr. Jefferson Reis - especialista em Ortodontia em Betim" fill priority sizes="(max-width: 768px) 92vw, 42vw" className="object-cover object-top transition duration-700 hover:scale-[1.02]" />
                     </div>
                     <div className="absolute -bottom-4 right-3 rounded-full bg-white px-5 py-3 text-[10px] font-medium uppercase tracking-[0.18em] text-gray-600 shadow-xl md:right-8">Invisalign · Self · SouSmile</div>

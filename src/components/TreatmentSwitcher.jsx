@@ -47,13 +47,13 @@ export default function TreatmentSwitcher() {
 
     return (
         <div className="mt-10 overflow-hidden rounded-[32px] border border-black/8 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.06)]">
-            <div className="grid border-b border-black/8 md:grid-cols-4">
+            <div className="flex overflow-x-auto border-b border-black/8 [scrollbar-width:none] md:grid md:grid-cols-4 [&::-webkit-scrollbar]:hidden">
                 {treatments.map((item, index) => (
                     <button
                         key={item.name}
                         type="button"
                         onClick={() => setActive(index)}
-                        className={`group relative px-5 py-5 text-left transition-colors duration-300 md:px-6 ${active === index ? 'bg-[#f5f5f7] text-txt-primary' : 'bg-white text-gray-500 hover:bg-[#faf8f4] hover:text-txt-primary'}`}
+                        className={`group relative min-w-[8.5rem] shrink-0 px-5 py-4 text-left transition-colors duration-300 md:min-w-0 md:px-6 md:py-5 ${active === index ? 'bg-[#f5f5f7] text-txt-primary' : 'bg-white text-gray-500 hover:bg-[#faf8f4] hover:text-txt-primary'}`}
                         aria-pressed={active === index}
                     >
                         <span className="text-[10px] font-medium uppercase tracking-[0.22em] opacity-60">0{index + 1}</span>
@@ -63,7 +63,7 @@ export default function TreatmentSwitcher() {
                 ))}
             </div>
 
-            <div className="grid gap-8 p-7 md:grid-cols-[0.8fr_1.2fr] md:p-12">
+            <div className="grid gap-6 p-5 md:grid-cols-[0.8fr_1.2fr] md:gap-8 md:p-12">
                 <div className="flex items-start gap-4">
                     <motion.div key={`${treatment.name}-icon`} initial={{ scale: 0.7, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="rounded-2xl bg-[#f6f0e5] p-4 text-brand-gold">
                         <Icon className="h-7 w-7" />
@@ -77,10 +77,10 @@ export default function TreatmentSwitcher() {
                 <AnimatePresence mode="wait">
                     <motion.div key={treatment.name} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.28 }}>
                         <p className="max-w-xl text-base leading-8 text-gray-600">{treatment.description}</p>
-                        <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                        <div className="mt-5 grid gap-2 sm:grid-cols-3 md:mt-6 md:gap-3">
                             {treatment.points.map((point) => <div key={point} className="rounded-2xl bg-[#faf8f4] px-4 py-4 text-sm font-semibold leading-6 text-gray-700">{point}</div>)}
                         </div>
-                        <WhatsAppTrackedLink href={`https://wa.me/553126260038?text=${encodeURIComponent(`Olá, gostaria de conversar sobre ${treatment.name} e saber se é indicado para o meu caso.`)}`} target="_blank" className="mt-7 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.16em] text-txt-primary transition-colors hover:text-brand-gold">Conversar sobre esta opção <ArrowUpRight className="h-4 w-4" /></WhatsAppTrackedLink>
+                        <WhatsAppTrackedLink href={`https://wa.me/553126260038?text=${encodeURIComponent(`Olá, gostaria de conversar sobre ${treatment.name} e saber se é indicado para o meu caso.`)}`} target="_blank" className="mt-6 inline-flex min-h-10 items-center gap-2 text-xs font-medium uppercase tracking-[0.12em] text-txt-primary transition-colors hover:text-brand-gold md:mt-7 md:tracking-[0.16em]">Conversar sobre esta opção <ArrowUpRight className="h-4 w-4" /></WhatsAppTrackedLink>
                     </motion.div>
                 </AnimatePresence>
             </div>
